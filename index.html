@@ -1,1428 +1,3547 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Tudo de Helena</title>
-
-  <meta name="description" content="Clique aqui e entre para fazer o orçamento, escolher os momentos de felicidades." />
-
-  <meta property="og:title" content="Tudo de Helena" />
-  <meta property="og:description" content="Clique aqui e entre para fazer o orçamento, escolher os momentos de felicidades." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://gatopreto494.github.io/Tudo_de_Helena/" />
-  <meta property="og:image" content="https://gatopreto494.github.io/Tudo_de_Helena/capa-whatsapp-v2.jpeg" />
-  <meta property="og:image:secure_url" content="https://gatopreto494.github.io/Tudo_de_Helena/capa-whatsapp-v2.jpeg" />
-  <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:locale" content="pt_BR" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Tudo de Helena" />
-  <meta name="twitter:description" content="Clique aqui e entre para fazer o orçamento, escolher os momentos de felicidades." />
-  <meta name="twitter:image" content="https://gatopreto494.github.io/Tudo_de_Helena/capa-whatsapp-v2.jpeg" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bingo Festa Julina | Na Casa da Lu</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
   <style>
     :root {
-      --fundo: #F8C8DC;
-      --fundo-2: #f4b6d2;
-      --card: #fff7fb;
-      --vinho: #FF69B4;
-      --vinho-escuro: #d94f99;
-      --dourado: #b78a42;
-      --dourado-claro: #d8b875;
-      --texto: #3f2533;
-      --texto-suave: #76586a;
-      --borda: rgba(255, 105, 180, .35);
-      --verde: #25d366;
+      --lu-rosa: #d81b60;
+      --lu-vinho: #7a113a;
+      --lu-amarelo: #ffd166;
+      --lu-laranja: #f77f00;
+      --lu-verde: #2a9d8f;
+      --lu-fundo: #fff7df;
+      --lu-card: #fffaf0;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
 
     body {
-      font-family: "Georgia", serif;
-      background:
-        radial-gradient(circle at top left, rgba(255, 105, 180, .18), transparent 32%),
-        linear-gradient(180deg, var(--fundo), var(--fundo-2));
-      color: var(--texto);
-      line-height: 1.6;
-    }
-
-    header {
       min-height: 100vh;
-      padding: 40px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
+      margin: 0;
       background:
-        linear-gradient(rgba(255, 255, 255, .12), rgba(255, 255, 255, .10)),
-        radial-gradient(circle at top right, rgba(255, 105, 180, .22), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(183, 138, 66, .22), transparent 35%);
-      border-bottom: 1px solid var(--borda);
+        radial-gradient(circle at 10% 10%, rgba(255, 209, 102, .35), transparent 28%),
+        radial-gradient(circle at 90% 15%, rgba(42, 157, 143, .22), transparent 24%),
+        linear-gradient(135deg, #fff7df 0%, #ffe4ec 48%, #fffaf0 100%);
+      color: #3d1f12;
     }
 
-    .hero {
-      max-width: 920px;
-      background: rgba(255, 247, 251, .88);
-      border: 1px solid var(--borda);
-      border-radius: 28px;
-      padding: 56px 28px;
-      box-shadow: 0 24px 60px rgba(63, 37, 51, .14);
-    }
-
-    .logo-hero {
-      display: block;
-      width: min(430px, 94%);
-      max-height: 330px;
-      object-fit: contain;
-      margin: 0 auto 28px;
-      border-radius: 50%;
-      filter: drop-shadow(0 12px 22px rgba(63, 37, 51, .14));
-    }
-
-    .hero p {
-      font-family: Arial, sans-serif;
-      font-size: 1.15rem;
-      max-width: 640px;
-      margin: auto;
-      color: var(--texto-suave);
-    }
-
-    nav {
+    nav.container-fluid {
+      background: rgba(255, 250, 240, .9);
+      border-bottom: 1px solid rgba(122, 17, 58, .13);
+      backdrop-filter: blur(8px);
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(255, 247, 251, .96);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid var(--borda);
-      padding: 14px 16px;
+    }
+
+    nav strong {
+      color: var(--lu-vinho);
+      letter-spacing: .02em;
+    }
+
+    .nav-actions {
+      align-items: center;
+    }
+
+    .menu-toggle,
+    .menu-fechar {
+      border: 0;
+      margin: 0;
+      border-radius: 999px;
+      font-weight: 950;
+      line-height: 1;
+      box-shadow: 0 10px 22px rgba(122, 17, 58, .14);
+    }
+
+    .menu-toggle {
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      font-size: 1.45rem;
+      background: linear-gradient(135deg, var(--lu-amarelo), var(--lu-laranja));
+      color: #441b03;
+    }
+
+    .menu-fechar {
+      width: 42px;
+      height: 42px;
+      padding: 0;
+      font-size: 1.65rem;
+      background: rgba(255,255,255,.9);
+      color: var(--lu-vinho);
+    }
+
+    .menu-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 997;
+      background: rgba(61, 31, 18, .48);
+      backdrop-filter: blur(5px);
+    }
+
+    .menu-lateral {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 998;
+      width: min(92vw, 420px);
+      height: 100vh;
+      overflow-y: auto;
+      padding: 1rem;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(255, 209, 102, .36), transparent 28%),
+        radial-gradient(circle at 86% 18%, rgba(42, 157, 143, .22), transparent 26%),
+        #fffaf0;
+      border-left: 1px solid rgba(122, 17, 58, .14);
+      box-shadow: -22px 0 60px rgba(61, 31, 18, .28);
+      transform: translateX(105%);
+      transition: transform .24s ease;
+    }
+
+    .menu-lateral.aberto {
+      transform: translateX(0);
+    }
+
+    body.menu-aberto {
+      overflow: hidden;
+    }
+
+    .menu-lateral-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .menu-lateral-header small {
+      display: block;
+      color: #7d5a47;
+      margin-bottom: .15rem;
+    }
+
+    .menu-lateral-header strong {
+      color: var(--lu-vinho);
+      font-size: 1.25rem;
+    }
+
+    .menu-painel {
+      box-shadow: none;
+      background: rgba(255, 250, 240, .86);
+    }
+
+    main.container {
+      padding-top: 2rem;
+      padding-bottom: 3rem;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: clamp(1.4rem, 4vw, 3rem);
+      margin-bottom: 1.5rem;
+      background:
+        linear-gradient(120deg, rgba(122, 17, 58, .86), rgba(216, 27, 96, .78)),
+        url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1400&q=80") center/cover;
+      color: white;
+      box-shadow: 0 24px 60px rgba(122, 17, 58, .24);
+    }
+
+    .hero::before {
+      content: "▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲ ▲";
+      position: absolute;
+      top: .75rem;
+      left: 1rem;
+      right: 1rem;
+      color: rgba(255, 209, 102, .75);
+      font-size: clamp(1rem, 2vw, 1.6rem);
+      letter-spacing: .35rem;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      padding-top: 1.2rem;
+    }
+
+    .hero h1 {
+      margin: 0 0 .35rem;
+      font-size: clamp(2.2rem, 7vw, 5rem);
+      line-height: .95;
+      color: #fff8da;
+      text-shadow: 0 5px 20px rgba(0,0,0,.24);
+    }
+
+    .hero p {
+      max-width: 640px;
+      margin-bottom: 1.2rem;
+      color: #fff8da;
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
+      gap: .8rem;
+      align-items: center;
     }
 
-    nav a {
-      display: inline-block;
-      padding: 11px 17px;
+    .botao-julina,
+    .botao-secundario {
+      border: 0;
       border-radius: 999px;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-weight: 700;
-      font-size: .92rem;
-      color: var(--vinho);
-      background: var(--card);
-      border: 1px solid var(--borda);
-      box-shadow:
-        0 7px 16px rgba(63, 53, 48, .08),
-        inset 0 1px 0 rgba(255, 255, 255, .45);
-      transition: all .2s ease;
-      cursor: pointer;
+      padding: .95rem 1.35rem;
+      font-weight: 800;
+      letter-spacing: .02em;
+      box-shadow: 0 12px 24px rgba(61, 31, 18, .2);
+      transform: translateY(0);
+      transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
     }
 
-    nav a:hover {
-      color: white;
-      background: linear-gradient(180deg, var(--vinho), var(--vinho-escuro));
+    .botao-julina {
+      background: linear-gradient(135deg, var(--lu-amarelo), var(--lu-laranja));
+      color: #441b03;
+    }
+
+    .botao-secundario {
+      background: rgba(255,255,255,.9);
+      color: var(--lu-vinho);
+    }
+
+    .botao-julina:hover,
+    .botao-secundario:hover {
       transform: translateY(-2px);
-      box-shadow: 0 10px 22px rgba(63, 37, 51, .22);
+      box-shadow: 0 18px 34px rgba(61, 31, 18, .24);
+      filter: saturate(1.06);
     }
 
-    nav a:active {
-      transform: translateY(1px);
-    }
-
-    section {
-      padding: 76px 20px;
-      max-width: 1180px;
-      margin: auto;
-      scroll-margin-top: 95px;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 36px;
-    }
-
-    h2 {
-      font-size: clamp(2.1rem, 5vw, 4.2rem);
-      color: var(--vinho);
-      font-weight: 400;
-      line-height: 1.1;
-    }
-
-    .section-title p {
-      font-family: Arial, sans-serif;
-      color: var(--texto-suave);
-      font-size: 1.05rem;
-      margin-top: 12px;
-    }
-
-    .cards {
+    .status-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 24px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: .9rem;
+      margin: 1.2rem 0 1.5rem;
     }
 
-    .card {
-      background: rgba(255, 247, 251, .95);
-      border: 1px solid var(--borda);
-      border-radius: 24px;
-      padding: 28px;
-      box-shadow: 0 16px 35px rgba(63, 37, 51, .08);
-      position: relative;
-      transition: all .2s ease;
+    .status-card {
+      background: rgba(255, 250, 240, .82);
+      border: 1px solid rgba(122, 17, 58, .1);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 12px 34px rgba(122, 17, 58, .08);
     }
 
-    .card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 20px 42px rgba(63, 37, 51, .12);
+    .status-card small {
+      display: block;
+      color: #7d5a47;
+      margin-bottom: .25rem;
     }
 
-    .card.selected {
-      border: 2px solid var(--dourado);
-      box-shadow: 0 20px 45px rgba(63, 37, 51, .14);
-      background: #fffdf8;
-    }
-
-    .card h3 {
-      color: var(--vinho);
-      font-size: 1.75rem;
-      font-weight: 400;
-      margin-bottom: 15px;
-      border-bottom: 1px solid var(--borda);
-      padding-bottom: 10px;
-    }
-
-    .price {
-      color: var(--vinho-escuro);
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin-bottom: 14px;
-      font-family: Arial, sans-serif;
-    }
-
-    ul {
-      list-style: none;
-      font-family: Arial, sans-serif;
-      color: var(--texto-suave);
-    }
-
-    li {
-      margin: 9px 0;
-      padding-left: 24px;
-      position: relative;
-    }
-
-    li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: var(--dourado);
+    .status-card strong {
+      color: var(--lu-vinho);
       font-size: 1.2rem;
+    }
+
+    .game-grid {
+      display: grid;
+      grid-template-columns: minmax(260px, .82fr) minmax(320px, 1.45fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .painel,
+    .cartela-bingo {
+      background: rgba(255, 250, 240, .92);
+      border: 1px solid rgba(122, 17, 58, .1);
+      border-radius: 24px;
+      padding: clamp(1rem, 3vw, 1.5rem);
+      box-shadow: 0 18px 46px rgba(122, 17, 58, .11);
+    }
+
+    .painel h2,
+    .cartela-bingo h2 {
+      color: var(--lu-vinho);
+      margin-bottom: .5rem;
+    }
+
+    .painel p,
+    .cartela-bingo p {
+      color: #6b3c2a;
+    }
+
+    .lista-sorteados {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .55rem;
+      min-height: 60px;
+      padding: .6rem;
+      background: rgba(255,255,255,.72);
+      border: 1px dashed rgba(122, 17, 58, .22);
+      border-radius: 18px;
+      align-items: flex-start;
+    }
+
+    .numero-sorteado {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--lu-rosa), var(--lu-vinho));
+      color: #fff;
+      font-weight: 900;
+      box-shadow: inset 0 -4px 8px rgba(0,0,0,.12), 0 7px 18px rgba(216,27,96,.18);
+    }
+
+    .numero-atual {
+      margin: .8rem 0;
+      border-radius: 22px;
+      padding: 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, #fff3bf, #ffd6e5);
+      color: var(--lu-vinho);
+    }
+
+    .numero-atual span {
+      display: block;
+      font-size: clamp(2.4rem, 8vw, 4.2rem);
+      font-weight: 950;
       line-height: 1;
     }
 
-    .select-btn,
-    .small-btn,
-    .whatsapp,
-    .pedido-acoes button {
-      border: none;
-      border-radius: 999px;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all .2s ease;
-    }
-
-    .select-btn,
-    .small-btn {
-      background: linear-gradient(180deg, var(--vinho), var(--vinho-escuro));
-      color: white;
-      box-shadow:
-        0 10px 18px rgba(63, 37, 51, .22),
-        inset 0 2px 0 rgba(255, 255, 255, .18),
-        inset 0 -3px 0 rgba(0, 0, 0, .14);
-    }
-
-    .select-btn {
-      width: 100%;
-      margin-top: 20px;
-      padding: 14px 18px;
-      font-size: 1rem;
-    }
-
-    .small-btn {
-      padding: 10px 16px;
-      white-space: nowrap;
-    }
-
-    .select-btn:hover,
-    .small-btn:hover,
-    .whatsapp:hover,
-    .pedido-acoes button:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.05);
-    }
-
-    .select-btn:active,
-    .small-btn:active,
-    .whatsapp:active,
-    .pedido-acoes button:active {
-      transform: translateY(1px);
-    }
-
-    .select-btn.selected-btn,
-    .small-btn.selected-btn {
-      background: linear-gradient(180deg, var(--dourado-claro), var(--dourado));
-      color: #4b1022;
-      box-shadow:
-        0 8px 16px rgba(63, 37, 51, .18),
-        inset 0 2px 0 rgba(255, 255, 255, .35),
-        inset 0 -3px 0 rgba(0,0,0,.12);
-    }
-
-    .menu-list {
-      max-width: 850px;
-      margin: auto;
+    .botoes-painel {
       display: grid;
-      gap: 14px;
+      gap: .65rem;
+      margin-top: .9rem;
     }
 
-    .menu-item {
-      background: rgba(255, 247, 251, .96);
-      border: 1px solid var(--borda);
-      border-radius: 999px;
-      padding: 15px 22px;
+    .botoes-painel button {
+      border-radius: 16px;
+      font-weight: 800;
+    }
+
+    .cartela-topo {
       display: flex;
       justify-content: space-between;
+      gap: .8rem;
       align-items: center;
-      gap: 15px;
-      font-family: Arial, sans-serif;
-      box-shadow: 0 8px 22px rgba(63, 37, 51, .06);
+      flex-wrap: wrap;
+      margin-bottom: .8rem;
     }
 
-    .menu-item strong {
-      color: var(--vinho);
-      white-space: nowrap;
-    }
-
-    .menu-info {
-      flex: 1;
-      color: var(--texto-suave);
-    }
-
-    .cta {
-      text-align: center;
-      background:
-        linear-gradient(180deg, rgba(255, 247, 251, .88), rgba(244, 182, 210, .7));
-      border-top: 1px solid var(--borda);
-      border-bottom: 1px solid var(--borda);
-      max-width: none;
-    }
-
-    .whatsapp {
-      display: inline-block;
-      margin-top: 25px;
-      text-decoration: none;
-      padding: 16px 28px;
-      font-size: 1rem;
-      background: linear-gradient(180deg, #2edb6d 0%, var(--verde) 100%);
-      color: white;
-      box-shadow:
-        0 12px 25px rgba(37, 211, 102, .25),
-        inset 0 2px 0 rgba(255, 255, 255, .35),
-        inset 0 -3px 0 rgba(0, 0, 0, .12);
-    }
-
-    .instagram-link {
-      margin-top: 20px;
+    .cartela-id {
       display: inline-flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      text-decoration: none;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      color: white;
-      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
-      padding: 12px 20px;
+      gap: .45rem;
       border-radius: 999px;
+      padding: .35rem .7rem;
+      background: #fff1ba;
+      color: #623008;
+      font-weight: 800;
+    }
+
+    .admin-sortear-rapido {
+      flex: 0 0 auto;
+      margin-left: auto;
+      min-width: 112px;
+      padding: .82rem 1.08rem;
+      border: 0;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #32c766, #169a4f 55%, #0d7d43);
+      color: #fff;
+      font-weight: 950;
+      letter-spacing: .02em;
+      text-transform: uppercase;
       box-shadow:
-        0 10px 22px rgba(131, 58, 180, .22),
-        inset 0 2px 0 rgba(255, 255, 255, .25),
-        inset 0 -3px 0 rgba(0, 0, 0, .12);
-      transition: all .2s ease;
+        0 16px 30px rgba(13, 125, 67, .32),
+        0 0 0 6px rgba(50, 199, 102, .12);
+      transform-origin: center;
+      animation: sortearAdmPulse 1.35s ease-in-out infinite;
     }
 
-    .instagram-link:hover {
-      transform: translateY(-2px);
-      filter: brightness(1.05);
+    .admin-sortear-rapido:hover,
+    .admin-sortear-rapido:focus {
+      filter: brightness(1.06);
+      transform: translateY(-1px) scale(1.03);
     }
 
-    .instagram-link:active {
-      transform: translateY(1px);
+    .admin-sortear-rapido.carregando {
+      opacity: .78;
+      pointer-events: none;
+      animation: none;
     }
 
-    .instagram-icon {
-      width: 22px;
-      height: 22px;
-      display: inline-flex;
+    @keyframes sortearAdmPulse {
+      0%, 100% {
+        transform: scale(1);
+        box-shadow:
+          0 16px 30px rgba(13, 125, 67, .30),
+          0 0 0 5px rgba(50, 199, 102, .10);
+      }
+      50% {
+        transform: scale(1.055);
+        box-shadow:
+          0 20px 38px rgba(13, 125, 67, .42),
+          0 0 0 11px rgba(50, 199, 102, .18);
+      }
     }
 
-    .instagram-icon svg {
-      width: 22px;
-      height: 22px;
-      fill: white;
+    .sorteados-cartela {
+      flex: 1 1 360px;
+      min-width: min(100%, 320px);
+      padding: .75rem;
+      border-radius: 18px;
+      background: rgba(255, 255, 255, .72);
+      border: 1px dashed rgba(122, 17, 58, .22);
     }
 
-    .dados-orcamento {
-      max-width: 820px;
-      margin: 30px auto 0;
-      background: rgba(255, 247, 251, .95);
-      border: 1px solid var(--borda);
-      border-radius: 24px;
-      padding: 24px;
-      box-shadow: 0 16px 35px rgba(63, 37, 51, .08);
-      font-family: Arial, sans-serif;
-      text-align: left;
-    }
-
-    .dados-orcamento h3 {
-      color: var(--vinho);
-      font-size: 1.35rem;
-      margin-bottom: 8px;
-      font-family: Georgia, serif;
-      font-weight: 400;
-      text-align: center;
-    }
-
-    .dados-orcamento p {
-      text-align: center;
-      color: var(--texto-suave);
-      margin-bottom: 20px;
-      font-size: .98rem;
-    }
-
-    .campos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-    }
-
-    .campo {
+    .sorteados-cartela-topo {
       display: flex;
-      flex-direction: column;
-    }
-
-    .campo.campo-grande {
-      grid-column: 1 / -1;
-    }
-
-    .campo label {
-      display: block;
-      color: var(--vinho);
-      font-weight: bold;
-      margin-bottom: 8px;
+      justify-content: space-between;
+      gap: .75rem;
+      align-items: center;
+      margin-bottom: .55rem;
+      color: var(--lu-vinho);
       font-size: .95rem;
     }
 
-    .campo input,
-    .campo textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 14px;
-      border: 1px solid var(--borda);
-      background: #fffdf8;
-      color: var(--texto);
-      font-size: 1rem;
-      font-family: Arial, sans-serif;
-      outline: none;
-      transition: all .2s ease;
-    }
-
-    .campo textarea {
-      min-height: 110px;
-      resize: vertical;
-      line-height: 1.5;
-    }
-
-    .campo input:focus,
-    .campo textarea:focus {
-      border-color: var(--vinho);
-      box-shadow: 0 0 0 3px rgba(255, 105, 180, .18);
-    }
-
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      font-family: Arial, sans-serif;
-      color: var(--texto-suave);
-      background: var(--fundo-2);
-    }
-
-    .aviso {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      color: var(--vinho);
-      background: rgba(255, 247, 251, .82);
-      border: 1px dashed var(--borda);
-      padding: 15px;
-      border-radius: 18px;
-      margin-bottom: 28px;
-    }
-
-    .carrinho-btn {
-      position: fixed;
-      right: 22px;
-      bottom: 22px;
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      border: none;
-      background: linear-gradient(180deg, var(--vinho), var(--vinho-escuro));
-      color: white;
-      font-size: 2rem;
-      cursor: pointer;
-      z-index: 100;
-      box-shadow:
-        0 14px 28px rgba(63, 37, 51, .32),
-        inset 0 2px 0 rgba(255,255,255,.2),
-        inset 0 -3px 0 rgba(0,0,0,.16);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all .2s ease;
-    }
-
-    .carrinho-btn:hover {
-      transform: translateY(-2px);
-    }
-
-    .carrinho-btn:active {
-      transform: translateY(1px);
-    }
-
-    .contador-carrinho {
-      position: absolute;
-      top: -6px;
-      right: -6px;
-      background: var(--dourado);
-      color: white;
-      width: 26px;
-      height: 26px;
-      border-radius: 50%;
-      font-size: .85rem;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 2px solid white;
-    }
-
-    .fundo-pedido {
-      position: fixed;
-      inset: 0;
-      background: rgba(63, 37, 51, .48);
-      z-index: 98;
-      display: none;
-      align-items: flex-end;
-      justify-content: center;
-      padding: 20px;
-    }
-
-    .fundo-pedido.aberto {
-      display: flex;
-    }
-
-    .pedido-box {
-      width: 100%;
-      max-width: 680px;
-      background: var(--card);
-      border: 1px solid var(--borda);
-      border-radius: 28px;
-      box-shadow: 0 20px 55px rgba(63, 37, 51, .32);
-      padding: 22px;
-      font-family: Arial, sans-serif;
-      animation: subir .25s ease;
-    }
-
-    @keyframes subir {
-      from {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-
-      to {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    .pedido-topo {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    .pedido-topo h3 {
-      color: var(--vinho);
-      font-size: 1.4rem;
-    }
-
-    .fechar-pedido {
-      background: linear-gradient(180deg, var(--vinho), var(--vinho-escuro));
-      color: white;
-      border: none;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      font-size: 1.4rem;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow:
-        0 8px 16px rgba(63, 37, 51, .22),
-        inset 0 2px 0 rgba(255,255,255,.18),
-        inset 0 -3px 0 rgba(0,0,0,.15);
-    }
-
-    .pedido-total {
-      font-weight: bold;
-      color: var(--vinho);
-      font-size: 1.2rem;
-      margin-bottom: 12px;
-    }
-
-    .pedido-lista {
-      max-height: 220px;
-      overflow-y: auto;
-      font-size: .98rem;
-      color: var(--texto-suave);
-      margin-bottom: 16px;
-      background: var(--fundo);
-      border-radius: 18px;
-      padding: 14px;
-      border: 1px solid var(--borda);
-    }
-
-    .pedido-item {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 9px 0;
-      border-bottom: 1px solid var(--borda);
-    }
-
-    .pedido-item:last-child {
-      border-bottom: none;
-    }
-
-    .pedido-item button {
-      background: transparent;
-      border: none;
-      color: var(--vinho);
-      font-weight: bold;
-      cursor: pointer;
+    .sorteados-cartela-topo span {
+      color: #6b3c2a;
       white-space: nowrap;
     }
 
-    .pedido-acoes {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
+    .lista-sorteados-cartela {
+      min-height: 54px;
+      max-height: 118px;
+      overflow-y: auto;
     }
 
-    .pedido-acoes button {
-      flex: 1;
-      min-width: 180px;
+    .lista-sorteados:empty::before {
+      content: "Nenhum número sorteado ainda";
+      color: #7d5a47;
+      font-size: .9rem;
+      padding: .35rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: .42rem;
       text-align: center;
-      padding: 13px 18px;
-      text-decoration: none;
+      margin: 0;
     }
 
-    .limpar {
-      background: linear-gradient(180deg, var(--fundo-2), var(--fundo));
-      color: var(--vinho);
-      box-shadow:
-        0 10px 18px rgba(63, 37, 51, .14),
-        inset 0 2px 0 rgba(255,255,255,.35),
-        inset 0 -3px 0 rgba(0,0,0,.08);
+    th {
+      background: linear-gradient(135deg, var(--lu-rosa), var(--lu-vinho));
+      color: #fff8da;
+      font-size: clamp(1.45rem, 5vw, 2.2rem);
+      padding: .65rem .2rem;
+      border-radius: 16px;
+      text-shadow: 0 2px 8px rgba(0,0,0,.18);
     }
 
-    .enviar {
-      background: linear-gradient(180deg, #2edb6d 0%, var(--verde) 100%);
-      color: white;
-      box-shadow:
-        0 12px 25px rgba(37, 211, 102, .25),
-        inset 0 2px 0 rgba(255, 255, 255, .35),
-        inset 0 -3px 0 rgba(0, 0, 0, .12);
+    td {
+      border: 2px solid rgba(122, 17, 58, .12);
+      background: #fff;
+      color: #4f2412;
+      font-size: clamp(1.25rem, 5vw, 2rem);
+      font-weight: 900;
+      height: clamp(58px, 11vw, 78px);
+      border-radius: 18px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .16s ease, background .16s ease, color .16s ease, box-shadow .16s ease;
+      box-shadow: 0 8px 18px rgba(122, 17, 58, .08);
     }
 
-    .toast-guia {
-      position: fixed;
-      left: 50%;
-      bottom: 105px;
-      transform: translateX(-50%) translateY(20px);
-      background: var(--card);
-      color: var(--vinho);
-      border: 1px solid var(--borda);
+    td:hover {
+      transform: translateY(-2px) rotate(-.5deg);
+      box-shadow: 0 12px 26px rgba(122, 17, 58, .14);
+    }
+
+    td.cantado {
+      border-color: rgba(42, 157, 143, .55);
+      box-shadow: inset 0 0 0 3px rgba(42, 157, 143, .13), 0 8px 18px rgba(122, 17, 58, .08);
+    }
+
+    td.marcado {
+      background: linear-gradient(135deg, var(--lu-rosa), var(--lu-vinho)) !important;
+      color: #fff8da;
+      transform: scale(.98);
+      box-shadow: inset 0 4px 12px rgba(0,0,0,.16);
+    }
+
+    td.livre {
+      background: linear-gradient(135deg, #fff0a6, #ffd166);
+      color: var(--lu-vinho);
+      cursor: default;
+    }
+
+    .selo {
+      display: inline-flex;
+      gap: .35rem;
+      align-items: center;
       border-radius: 999px;
-      padding: 13px 20px;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      box-shadow: 0 12px 30px rgba(63, 37, 51, .18);
-      z-index: 110;
+      padding: .25rem .65rem;
+      background: rgba(42, 157, 143, .12);
+      color: #13685f;
+      font-size: .86rem;
+      font-weight: 750;
+    }
+
+    .muted {
+      color: #7d5a47;
+      font-size: .92rem;
+    }
+
+    dialog {
+      border: 0;
+      border-radius: 30px;
+      width: min(92vw, 520px);
+      max-height: calc(100dvh - 1rem);
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+    }
+
+    dialog::backdrop {
+      background: rgba(61, 31, 18, .58);
+      backdrop-filter: blur(6px);
+    }
+
+    .modal-card {
+      position: relative;
+      overflow-y: auto;
+      overflow-x: hidden;
+      max-height: calc(100dvh - 1rem);
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      padding: clamp(1.3rem, 5vw, 2rem);
+      text-align: center;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(255,209,102,.48), transparent 26%),
+        radial-gradient(circle at 85% 20%, rgba(42,157,143,.28), transparent 28%),
+        #fffaf0;
+      border-radius: 30px;
+      box-shadow: 0 25px 80px rgba(0,0,0,.32);
+    }
+
+    .modal-card h2 {
+      font-size: clamp(2rem, 8vw, 4rem);
+      margin-bottom: .35rem;
+      color: var(--lu-vinho);
+    }
+
+    .modal-card p {
+      color: #5f311e;
+    }
+
+    .modal-card button {
+      border-radius: 999px;
+      font-weight: 850;
+      margin-top: .8rem;
+    }
+
+    .modal-card input {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .ajuda-data {
+      display: block;
+      margin-top: .35rem;
+      color: #7d5a47;
+    }
+
+    .cartela-bloqueada {
+      padding: 2rem 1rem;
+      text-align: center;
+      color: #7d5a47;
+      font-weight: 700;
+    }
+
+    .bandeirinhas {
+      margin: .5rem 0 1rem;
+      font-size: 1.7rem;
+      letter-spacing: .15rem;
+    }
+
+    .intro {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      display: grid;
+      place-items: center;
+      padding: 1rem;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255, 209, 102, .55), transparent 22%),
+        radial-gradient(circle at 82% 12%, rgba(42, 157, 143, .35), transparent 26%),
+        linear-gradient(145deg, rgba(122,17,58,.96), rgba(216,27,96,.92));
+    }
+
+    .intro-card {
+      width: min(92vw, 650px);
+      text-align: center;
+      background: #fffaf0;
+      color: #4f2412;
+      border-radius: 34px;
+      padding: clamp(1.3rem, 5vw, 3rem);
+      box-shadow: 0 30px 90px rgba(0,0,0,.28);
+    }
+
+    .intro-card h1 {
+      margin: .2rem 0 .4rem;
+      color: var(--lu-vinho);
+      font-size: clamp(2.2rem, 9vw, 5rem);
+      line-height: .9;
+    }
+
+    .intro-card p {
+      max-width: 520px;
+      margin-inline: auto;
+      color: #6b3c2a;
+    }
+
+    .intro-card button {
+      margin-top: 1rem;
+      font-size: 1.18rem;
+    }
+
+
+    .sync-status {
+      margin-top: .8rem;
+      padding: .75rem .9rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .72);
+      border: 1px dashed rgba(122, 17, 58, .22);
+      font-size: .92rem;
+    }
+
+    .sync-status.ok {
+      border-color: rgba(42, 157, 143, .45);
+      color: #1f6f66;
+    }
+
+    .sync-status.warn {
+      border-color: rgba(247, 127, 0, .45);
+      color: #945200;
+    }
+
+    .sync-status.erro {
+      border-color: rgba(216, 27, 96, .45);
+      color: var(--lu-vinho);
+    }
+
+    .senha-erro {
+      display: block;
+      min-height: 1.35rem;
+      color: var(--lu-vinho);
+      font-weight: 700;
+    }
+
+    .modal-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin-top: 1rem;
+    }
+
+
+    .premios-resumo {
+      margin: .45rem 0 0;
+      color: #6b3c2a;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .premios-resumo:empty,
+    .premios-dica:empty,
+    #premiosDescricao:empty {
+      display: none;
+    }
+
+    #premiosDescricao,
+    .premios-dica {
+      display: none !important;
+    }
+
+    .premios-modos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .75rem;
+      margin: .85rem 0 .65rem;
+    }
+
+    .premio-modo {
+      min-height: 68px;
+      padding: .7rem .45rem;
+      border-radius: 18px;
+      border: 2px solid rgba(216, 27, 96, .18);
+      background: #fffaf0;
+      color: var(--lu-vinho);
+      font-weight: 950;
+      box-shadow: 0 8px 18px rgba(122, 17, 58, .08);
+    }
+
+    .premio-modo small {
+      display: block;
+      margin-top: .1rem;
+      color: #6b3c2a;
+      font-weight: 800;
+    }
+
+    .premio-modo.ativo {
+      background: linear-gradient(135deg, var(--lu-rosa), var(--lu-vinho));
+      border-color: rgba(255, 255, 255, .7);
+      color: #fffaf0;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 28px rgba(122, 17, 58, .22);
+    }
+
+    .premio-modo.ativo small {
+      color: #fff3c4;
+    }
+
+    .premios-dica {
+      margin: .35rem 0 .8rem;
+      color: #7d5a47;
+      font-weight: 750;
+      text-align: center;
+    }
+
+    .premios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+      gap: .65rem;
+      margin: .8rem 0;
+      max-height: min(52dvh, 430px);
+      overflow-y: auto;
+      padding: .35rem;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+      border-radius: 22px;
+    }
+
+    .premios-grid.modo-600 {
+      grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+      max-height: min(56dvh, 520px);
+      border: 2px dashed rgba(42, 157, 143, .28);
+      background: rgba(255, 255, 255, .36);
+      scrollbar-width: thin;
+    }
+
+    .premio-numero {
+      position: relative;
+      min-height: 58px;
+      border-radius: 18px;
+      border: 2px solid rgba(216, 27, 96, .25);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 209, 102, .5), transparent 35%),
+        #fffaf0;
+      color: var(--lu-vinho);
+      font-size: 1.3rem;
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+
+    .premio-numero.modo-600 {
+      min-height: 58px;
+      border-radius: 18px;
+      font-size: 1.3rem;
+      letter-spacing: 0;
+    }
+
+    .premio-numero:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(122, 17, 58, .16);
+    }
+
+    .premio-numero.escolhido {
+      opacity: .55;
+      cursor: not-allowed;
+      background: #f3e8df;
+      border-color: rgba(122, 17, 58, .22);
+      color: #7d5a47;
+    }
+
+    .premio-numero.escolhido::after {
+      content: "X";
+      position: absolute;
+      inset: 50% auto auto 50%;
+      transform: translate(-50%, -50%) rotate(-12deg);
+      font-size: 3rem;
+      line-height: 1;
+      color: var(--lu-rosa);
+      text-shadow: 0 2px 0 #fffaf0;
+      pointer-events: none;
+    }
+
+
+
+
+    .premio-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 4200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255, 209, 102, .28), transparent 32%),
+        radial-gradient(circle at 80% 20%, rgba(216, 27, 96, .24), transparent 30%),
+        rgba(30, 12, 22, .62);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      animation: premioPopupFundo .25s ease-out both;
+    }
+
+    .premio-popup-card {
+      position: relative;
+      width: min(92vw, 720px);
+      padding: clamp(1.3rem, 5vw, 2.3rem);
+      border-radius: 36px;
+      border: 4px solid rgba(255, 209, 102, .95);
+      background:
+        radial-gradient(circle at 14% 12%, rgba(255, 209, 102, .96), transparent 28%),
+        radial-gradient(circle at 86% 16%, rgba(216, 27, 96, .32), transparent 31%),
+        linear-gradient(135deg, #fffaf0, #ffe2ef 45%, #fff1ad);
+      color: var(--lu-vinho);
+      box-shadow:
+        0 0 0 10px rgba(255, 255, 255, .28),
+        0 0 48px rgba(255, 209, 102, .85),
+        0 34px 100px rgba(0, 0, 0, .38);
+      text-align: center;
+      overflow: hidden;
+      transform-origin: center;
+      animation: premioPopupEntrada .45s cubic-bezier(.16, 1.25, .32, 1) both, premioPopupBrilho 1.25s ease-in-out infinite alternate;
+    }
+
+    .premio-popup-card::before {
+      content: "🎁 🌽 🎯 ✨ 🌈 🎉";
+      display: block;
+      margin-bottom: .55rem;
+      font-size: clamp(1.3rem, 5vw, 2.25rem);
+      letter-spacing: .2rem;
+      filter: drop-shadow(0 3px 0 rgba(255, 255, 255, .75));
+    }
+
+    .premio-popup-card.extra::before {
+      content: "🥜 🫂 🤝 ✨ 🌽 🎉";
+    }
+
+    .premio-popup-card.vazio::before {
+      content: "😅 🌽 🎯 🤏 ✨";
+    }
+
+    .premio-popup-icone {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(74px, 18vw, 112px);
+      height: clamp(74px, 18vw, 112px);
+      margin: .25rem auto .55rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .72);
+      box-shadow:
+        inset 0 0 0 4px rgba(216, 27, 96, .13),
+        0 14px 35px rgba(122, 17, 58, .22);
+      font-size: clamp(2.5rem, 10vw, 4.5rem);
+      line-height: 1;
+      animation: premioPopupPulsar .9s ease-in-out infinite alternate;
+    }
+
+    .premio-popup-titulo {
+      margin: .2rem 0 .35rem;
+      color: var(--lu-vinho);
+      font-size: clamp(2rem, 8vw, 4.35rem);
+      line-height: .95;
+      font-weight: 950;
+      text-shadow:
+        0 3px 0 #fffaf0,
+        0 0 26px rgba(255, 209, 102, .85);
+    }
+
+    .premio-popup-texto {
+      margin: 0 auto;
+      max-width: 620px;
+      color: #54271b;
+      font-size: clamp(1.15rem, 4.8vw, 2.1rem);
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .premio-popup-subtexto {
+      margin: .75rem auto 0;
+      max-width: 600px;
+      color: #7a4a36;
+      font-size: clamp(1rem, 3.6vw, 1.35rem);
+      font-weight: 800;
+    }
+
+    .premio-popup-fechar {
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255, 255, 255, .88);
+      color: var(--lu-vinho);
+      font-size: 1.55rem;
+      font-weight: 950;
+      box-shadow: 0 8px 22px rgba(122, 17, 58, .16);
+    }
+
+    .premio-popup-saindo {
+      animation: premioPopupSair .22s ease-in both;
+    }
+
+    @keyframes premioPopupFundo {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes premioPopupEntrada {
+      from {
+        opacity: 0;
+        transform: scale(.72) rotate(-5deg);
+      }
+      70% {
+        transform: scale(1.04) rotate(1.5deg);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    @keyframes premioPopupSair {
+      to {
+        opacity: 0;
+        transform: scale(.9);
+      }
+    }
+
+    @keyframes premioPopupBrilho {
+      from {
+        box-shadow:
+          0 0 0 10px rgba(255, 255, 255, .22),
+          0 0 38px rgba(255, 209, 102, .72),
+          0 34px 100px rgba(0, 0, 0, .34);
+      }
+      to {
+        box-shadow:
+          0 0 0 14px rgba(255, 255, 255, .32),
+          0 0 66px rgba(255, 209, 102, 1),
+          0 38px 110px rgba(122, 17, 58, .48);
+      }
+    }
+
+    @keyframes premioPopupPulsar {
+      from { transform: scale(1) rotate(-2deg); }
+      to { transform: scale(1.1) rotate(2deg); }
+    }
+
+    .mensagem-engracada {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(.82) rotate(-3deg);
+      z-index: 3000;
+      width: min(92vw, 760px);
+      padding: 1.25rem 1.65rem;
+      border-radius: 34px;
+      border: 3px solid rgba(255, 209, 102, .95);
+      background:
+        radial-gradient(circle at 12% 10%, rgba(255, 209, 102, .95), transparent 28%),
+        radial-gradient(circle at 88% 18%, rgba(216, 27, 96, .30), transparent 30%),
+        linear-gradient(135deg, rgba(255, 250, 240, .99), rgba(255, 218, 235, .99) 45%, rgba(255, 241, 173, .98));
+      color: var(--lu-vinho);
+      box-shadow:
+        0 0 0 7px rgba(216, 27, 96, .13),
+        0 0 38px rgba(255, 209, 102, .75),
+        0 32px 90px rgba(122, 17, 58, .36);
+      text-align: center;
+      font-size: clamp(1.35rem, 5vw, 2.65rem);
+      font-weight: 950;
+      line-height: 1.12;
+      letter-spacing: .01em;
+      text-shadow:
+        0 2px 0 rgba(255, 255, 255, .95),
+        0 0 18px rgba(255, 255, 255, .75);
       opacity: 0;
       pointer-events: none;
-      transition: all .3s ease;
-      text-align: center;
-      max-width: calc(100% - 40px);
+      transition: opacity .28s ease, transform .28s ease;
     }
 
-    .toast-guia.mostrar {
+    .mensagem-engracada::before,
+    .mensagem-engracada::after {
+      content: "✨";
+      position: absolute;
+      top: -.95rem;
+      font-size: clamp(1.4rem, 4vw, 2.3rem);
+      filter: drop-shadow(0 5px 8px rgba(122, 17, 58, .22));
+    }
+
+    .mensagem-engracada::before {
+      left: 1.1rem;
+    }
+
+    .mensagem-engracada::after {
+      right: 1.1rem;
+    }
+
+    .mensagem-engracada.visivel {
       opacity: 1;
-      transform: translateX(-50%) translateY(0);
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+      animation: mensagemBafonica 1s ease-in-out infinite alternate;
     }
 
-    @media (max-width: 700px) {
-      nav {
-        gap: 10px;
+    @keyframes mensagemBafonica {
+      from {
+        box-shadow:
+          0 0 0 7px rgba(216, 27, 96, .13),
+          0 0 38px rgba(255, 209, 102, .75),
+          0 32px 90px rgba(122, 17, 58, .36);
       }
-
-      nav a {
-        font-size: .9rem;
-        padding: 11px 15px;
-      }
-
-      .logo-hero {
-        width: min(360px, 96%);
+      to {
+        box-shadow:
+          0 0 0 10px rgba(216, 27, 96, .18),
+          0 0 58px rgba(255, 209, 102, .95),
+          0 38px 105px rgba(122, 17, 58, .42);
       }
     }
 
-    @media (max-width: 600px) {
-      .menu-item {
+    @media (max-width: 560px) {
+  
+    .premio-popup {
+      position: fixed;
+      inset: 0;
+      z-index: 4200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(255, 209, 102, .28), transparent 32%),
+        radial-gradient(circle at 80% 20%, rgba(216, 27, 96, .24), transparent 30%),
+        rgba(30, 12, 22, .62);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      animation: premioPopupFundo .25s ease-out both;
+    }
+
+    .premio-popup-card {
+      position: relative;
+      width: min(92vw, 720px);
+      padding: clamp(1.3rem, 5vw, 2.3rem);
+      border-radius: 36px;
+      border: 4px solid rgba(255, 209, 102, .95);
+      background:
+        radial-gradient(circle at 14% 12%, rgba(255, 209, 102, .96), transparent 28%),
+        radial-gradient(circle at 86% 16%, rgba(216, 27, 96, .32), transparent 31%),
+        linear-gradient(135deg, #fffaf0, #ffe2ef 45%, #fff1ad);
+      color: var(--lu-vinho);
+      box-shadow:
+        0 0 0 10px rgba(255, 255, 255, .28),
+        0 0 48px rgba(255, 209, 102, .85),
+        0 34px 100px rgba(0, 0, 0, .38);
+      text-align: center;
+      overflow: hidden;
+      transform-origin: center;
+      animation: premioPopupEntrada .45s cubic-bezier(.16, 1.25, .32, 1) both, premioPopupBrilho 1.25s ease-in-out infinite alternate;
+    }
+
+    .premio-popup-card::before {
+      content: "🎁 🌽 🎯 ✨ 🌈 🎉";
+      display: block;
+      margin-bottom: .55rem;
+      font-size: clamp(1.3rem, 5vw, 2.25rem);
+      letter-spacing: .2rem;
+      filter: drop-shadow(0 3px 0 rgba(255, 255, 255, .75));
+    }
+
+    .premio-popup-card.extra::before {
+      content: "🥜 🫂 🤝 ✨ 🌽 🎉";
+    }
+
+    .premio-popup-card.vazio::before {
+      content: "😅 🌽 🎯 🤏 ✨";
+    }
+
+    .premio-popup-icone {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(74px, 18vw, 112px);
+      height: clamp(74px, 18vw, 112px);
+      margin: .25rem auto .55rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .72);
+      box-shadow:
+        inset 0 0 0 4px rgba(216, 27, 96, .13),
+        0 14px 35px rgba(122, 17, 58, .22);
+      font-size: clamp(2.5rem, 10vw, 4.5rem);
+      line-height: 1;
+      animation: premioPopupPulsar .9s ease-in-out infinite alternate;
+    }
+
+    .premio-popup-titulo {
+      margin: .2rem 0 .35rem;
+      color: var(--lu-vinho);
+      font-size: clamp(2rem, 8vw, 4.35rem);
+      line-height: .95;
+      font-weight: 950;
+      text-shadow:
+        0 3px 0 #fffaf0,
+        0 0 26px rgba(255, 209, 102, .85);
+    }
+
+    .premio-popup-texto {
+      margin: 0 auto;
+      max-width: 620px;
+      color: #54271b;
+      font-size: clamp(1.15rem, 4.8vw, 2.1rem);
+      line-height: 1.2;
+      font-weight: 900;
+    }
+
+    .premio-popup-subtexto {
+      margin: .75rem auto 0;
+      max-width: 600px;
+      color: #7a4a36;
+      font-size: clamp(1rem, 3.6vw, 1.35rem);
+      font-weight: 800;
+    }
+
+    .premio-popup-fechar {
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border-radius: 999px;
+      border: 0;
+      background: rgba(255, 255, 255, .88);
+      color: var(--lu-vinho);
+      font-size: 1.55rem;
+      font-weight: 950;
+      box-shadow: 0 8px 22px rgba(122, 17, 58, .16);
+    }
+
+    .premio-popup-saindo {
+      animation: premioPopupSair .22s ease-in both;
+    }
+
+    @keyframes premioPopupFundo {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes premioPopupEntrada {
+      from {
+        opacity: 0;
+        transform: scale(.72) rotate(-5deg);
+      }
+      70% {
+        transform: scale(1.04) rotate(1.5deg);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+      }
+    }
+
+    @keyframes premioPopupSair {
+      to {
+        opacity: 0;
+        transform: scale(.9);
+      }
+    }
+
+    @keyframes premioPopupBrilho {
+      from {
+        box-shadow:
+          0 0 0 10px rgba(255, 255, 255, .22),
+          0 0 38px rgba(255, 209, 102, .72),
+          0 34px 100px rgba(0, 0, 0, .34);
+      }
+      to {
+        box-shadow:
+          0 0 0 14px rgba(255, 255, 255, .32),
+          0 0 66px rgba(255, 209, 102, 1),
+          0 38px 110px rgba(122, 17, 58, .48);
+      }
+    }
+
+    @keyframes premioPopupPulsar {
+      from { transform: scale(1) rotate(-2deg); }
+      to { transform: scale(1.1) rotate(2deg); }
+    }
+
+    .mensagem-engracada {
+        width: min(94vw, 430px);
+        padding: 1.1rem 1.2rem;
+        border-radius: 26px;
+      }
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 860px) {
+      main.container {
+        padding-top: .75rem;
+        padding-bottom: 1.5rem;
+      }
+
+      .hero,
+      .status-grid {
+        display: none;
+      }
+
+      .game-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .cartela-bingo {
+        padding: .75rem;
         border-radius: 20px;
-        flex-direction: column;
-        align-items: flex-start;
       }
 
-      nav {
-        position: static;
+      .cartela-topo {
+        gap: .55rem;
+        margin-bottom: .55rem;
       }
 
-      section {
-        scroll-margin-top: 20px;
+      .admin-sortear-rapido {
+        align-self: flex-start;
+        margin-left: auto;
+        min-width: 104px;
+        padding: .72rem .9rem;
+        font-size: .82rem;
       }
 
-      .pedido-box {
-        border-radius: 24px 24px 0 0;
+      .sorteados-cartela {
+        flex-basis: 100%;
+        padding: .6rem;
       }
 
-      .pedido-acoes button {
-        min-width: 100%;
+      .lista-sorteados {
+        gap: .35rem;
+        padding: .45rem;
       }
 
-      .fundo-pedido {
-        padding: 0;
+      .lista-sorteados-cartela {
+        max-height: 88px;
       }
 
-      .carrinho-btn {
-        right: 16px;
-        bottom: 16px;
+      .numero-sorteado {
+        width: 34px;
+        height: 34px;
+        font-size: .85rem;
       }
 
-      .toast-guia {
-        bottom: 95px;
+      table {
+        border-spacing: .24rem;
+      }
+
+      th {
+        border-radius: 13px;
+        padding: .5rem .15rem;
+      }
+
+      td {
+        height: clamp(48px, 16vw, 66px);
+        border-radius: 14px;
+      }
+
+      .menu-lateral {
+        width: min(94vw, 390px);
+        padding: .85rem;
+      }
+    }
+  
+    @media (max-width: 560px) {
+      #premiosDialog {
+        width: 96vw;
+        max-height: calc(100dvh - .5rem);
+      }
+
+      #premiosDialog .modal-card {
+        max-height: calc(100dvh - .5rem);
+        padding: 1.05rem .9rem;
+      }
+
+      #premiosDialog .bandeirinhas {
+        font-size: 1.4rem;
+        margin-bottom: .2rem;
+      }
+
+      #premiosDialog h2 {
+        font-size: clamp(2rem, 10vw, 3.1rem);
+        margin-bottom: .25rem;
+      }
+
+      #premiosDialog .premios-modos {
+        gap: .55rem;
+        margin: .65rem 0 .35rem;
+      }
+
+      #premiosDialog .premio-modo {
+        min-height: 56px;
+        padding: .45rem .35rem;
         border-radius: 18px;
       }
 
-      .logo-hero {
-        width: min(300px, 98%);
-        max-height: 260px;
+      #premiosDialog .premios-grid {
+        max-height: 52dvh;
+        gap: .5rem;
+        margin: .55rem 0;
+      }
+
+      #premiosDialog .premios-grid.modo-600 {
+        max-height: 56dvh;
+        grid-template-columns: repeat(auto-fit, minmax(64px, 1fr));
+        gap: .5rem;
+      }
+
+      #premiosDialog .premio-numero {
+        min-height: 52px;
+        border-radius: 16px;
+        font-size: 1.15rem;
+      }
+
+      #premiosDialog .premio-numero.modo-600 {
+        min-height: 52px;
+        border-radius: 16px;
+        font-size: 1.15rem;
+      }
+
+      #premiosDialog .modal-actions {
+        position: sticky;
+        bottom: -.95rem;
+        background: rgba(255, 250, 240, .94);
+        backdrop-filter: blur(8px);
+        padding-top: .45rem;
+        padding-bottom: .45rem;
+        margin-bottom: -.95rem;
+        z-index: 2;
       }
     }
+
+
+    /* Correção: rolagem dos prêmios até o 600 no celular */
+    #premiosDialog {
+      width: min(96vw, 720px);
+      max-height: calc(100dvh - .75rem);
+    }
+
+    #premiosDialog .modal-card {
+      height: calc(100dvh - .75rem);
+      max-height: calc(100dvh - .75rem);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding-bottom: .9rem;
+    }
+
+    #premiosDialog .bandeirinhas,
+    #premiosDialog h2,
+    #premiosDialog .premios-modos,
+    #premiosDialog .premios-dica,
+    #premiosDialog .premios-resumo,
+    #premiosDialog .modal-actions {
+      flex: 0 0 auto;
+    }
+
+    #premiosGrid {
+      flex: 1 1 auto;
+      min-height: 0;
+      max-height: none !important;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-bottom: 7rem;
+      scroll-padding-bottom: 7rem;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    #premiosGrid.modo-600 {
+      max-height: none !important;
+    }
+
+    #premiosDialog .modal-actions {
+      position: sticky;
+      bottom: 0;
+      z-index: 5;
+      margin-top: .65rem;
+      padding-top: .65rem;
+      background:
+        linear-gradient(to top, #fffaf0 70%, rgba(255, 250, 240, 0));
+    }
+
+    @media (max-width: 560px) {
+      #premiosDialog {
+        width: 100vw;
+        max-height: 100dvh;
+        border-radius: 24px 24px 0 0;
+      }
+
+      #premiosDialog .modal-card {
+        height: calc(100dvh - .25rem);
+        max-height: calc(100dvh - .25rem);
+        border-radius: 24px 24px 0 0;
+        padding-inline: 1rem;
+      }
+
+      #premiosGrid {
+        padding-bottom: 8.5rem;
+      }
+
+      #premiosDialog .modal-actions {
+        grid-template-columns: 1fr 1fr;
+        gap: .55rem;
+      }
+    }
+
   </style>
 </head>
-
 <body>
+  <div id="mensagemEngracada" class="mensagem-engracada" role="status" aria-live="polite"></div>
 
-  <header>
-    <div class="hero">
-      <img class="logo-hero" src="logo.png" alt="Tudo de Helena">
+  <div class="intro" id="intro">
+    <article class="intro-card">
+      <div class="bandeirinhas">🏳️‍🌈 🔥 🌽 🎯 🪗 🌽 🔥 🏳️‍🌈</div>
+      <p class="selo">Festa Julina • Bingo Interativo</p>
+      <h1>Na Casa da Lu</h1>
+      <p>Prepare o milho, ajeite o chapéu e entre no arraiá do bingo. Sua cartela será definida pela sua data de nascimento, pedida somente no primeiro acesso deste celular.</p>
+      <button class="botao-julina" id="btnEntrar">Bora jogar, sô!</button>
+    </article>
+  </div>
 
-      <p>Escolha os itens para sua comemoração e envie seu orçamento de forma prática pelo WhatsApp.</p>
-
-      <a class="whatsapp" href="#" onclick="irParaOrcamento(event)">
-        Começar orçamento
-      </a>
-    </div>
-  </header>
-
-  <nav>
-    <a href="#pegue">Pegue e Monte</a>
-    <a href="#mesa">Montagem</a>
-    <a href="#festa">Festa na Mesa</a>
-    <a href="#doces">Doces</a>
-    <a href="#bolos">Bolos</a>
-    <a href="#adicionais">Adicionais</a>
-    <a href="#pagamento">Pagamento</a>
+  <nav class="container-fluid">
+    <ul><li><strong>Na Casa da Lu</strong></li></ul>
+    <ul class="nav-actions">
+      <li>
+        <button
+          class="menu-toggle"
+          id="btnAbrirMenu"
+          type="button"
+          aria-controls="menuLateral"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >☰</button>
+      </li>
+    </ul>
   </nav>
 
-  <section id="pegue">
-    <div class="section-title">
-      <h2>Kit Pegue e Monte</h2>
-      <p>Opções práticas para montar sua festa com charme e economia.</p>
+  <div class="menu-backdrop hidden" id="menuBackdrop"></div>
+  <aside class="menu-lateral" id="menuLateral" aria-hidden="true" aria-label="Menu do bingo">
+    <div class="menu-lateral-header">
+      <div>
+        <small>Menu do bingo</small>
+        <strong>Controles e sorteio</strong>
+      </div>
+      <button class="menu-fechar" id="btnFecharMenu" type="button" aria-label="Fechar menu">×</button>
     </div>
-
-    <div class="aviso">
-      Clique em “Selecionar” nos itens desejados. O site te guia suavemente para a próxima categoria.
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Bronze</h3>
-        <div class="price">R$180,00</div>
-        <ul>
-          <li>Painel redondo + capa</li>
-          <li>3 cilindros + capa</li>
-          <li>Tapete</li>
-          <li>2 vasos na cor do tema + buchinhos</li>
-          <li>Bandejas para doces na cor do tema</li>
-          <li>Boleira na cor do tema</li>
-          <li>Meio arco de bexigas</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Kit Pegue e Monte - Bronze', 180)">Selecionar</button>
+    <div class="painel menu-painel">
+        <h2>Roleta do arraiá</h2>
+        <div class="numero-atual">
+          <small>Último número cantado</small>
+          <span id="numeroAtual">--</span>
+        </div>
+        <div class="botoes-painel">
+          <button id="btnSortear">Sortear número com senha</button>
+          <button class="secondary" id="btnNovaCartela">Nova cartela</button>
+          <button class="secondary" id="btnPremios">Prêmios</button>
+          <button class="contrast" id="btnReiniciar">Nova partida</button>
+        </div>
+        <p class="sync-status warn hidden" id="statusConexao"></p>
+        <hr>
+        <h3>Números sorteados</h3>
+        <div class="lista-sorteados" id="listaSorteadosMenu" aria-live="polite"></div>
       </div>
+  </aside>
 
-      <div class="card">
-        <h3>Prata</h3>
-        <div class="price">R$220,00</div>
-        <ul>
-          <li>Painel redondo + capa</li>
-          <li>3 cilindros + capa</li>
-          <li>Tapete</li>
-          <li>2 vasos na cor do tema + buchinhos</li>
-          <li>Bandejas para doces na cor do tema</li>
-          <li>Arco de bexigas completo</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Kit Pegue e Monte - Prata', 220)">Selecionar</button>
-      </div>
-
-      <div class="card">
-        <h3>Ouro</h3>
-        <div class="price">R$280,00</div>
-        <ul>
-          <li>Painel redondo + capa</li>
-          <li>3 cilindros + capa</li>
-          <li>Tapete</li>
-          <li>2 vasos na cor do tema + buchinhos</li>
-          <li>Bandejas para doces na cor do tema</li>
-          <li>Boleira</li>
-          <li>Escadinha para lembrancinhas</li>
-          <li>Arco de bexigas completo</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Kit Pegue e Monte - Ouro', 280)">Selecionar</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="mesa">
-    <div class="section-title">
-      <h2>Montagem de Mesa</h2>
-      <p>Soluções completas para uma decoração ainda mais especial.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Classic</h3>
-        <div class="price">R$450,00</div>
-        <ul>
-          <li>Painel redondo + capa</li>
-          <li>3 cilindros + capa</li>
-          <li>Tapete</li>
-          <li>Vasos na cor do tema com flores</li>
-          <li>Displays</li>
-          <li>Bandejas na cor do tema</li>
-          <li>Boleira</li>
-          <li>Escadinha</li>
-          <li>Arco de bexigas desconstruído</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Montagem de Mesa - Classic', 450)">Selecionar</button>
-      </div>
-
-      <div class="card">
-        <h3>Premium</h3>
-        <div class="price">A partir de R$650,00</div>
-        <ul>
-          <li>Painel redondo + capa</li>
-          <li>Painel romano + capa</li>
-          <li>3 cilindros + capa</li>
-          <li>Mesa de centro</li>
-          <li>Tapete</li>
-          <li>Vasos com flores</li>
-          <li>Displays em LED</li>
-          <li>Estante para lembrancinhas</li>
-          <li>Bandejas para doces</li>
-          <li>Boleira</li>
-          <li>Arco de bexigas desconstruído</li>
-          <li>Arrumação da mesa dos convidados</li>
-          <li>Arrumação da entrada da festa</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Montagem de Mesa - Premium', 650)">Selecionar</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="festa">
-    <div class="section-title">
-      <h2>Kit Festa na Mesa</h2>
-      <p>Perfeito para comemorações compactas e cheias de encanto.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Opção 1</h3>
-        <div class="price">R$60,00</div>
-        <ul>
-          <li>Painel 50x50 no tema</li>
-          <li>Mini arco de balões</li>
-          <li>Bandejas</li>
-          <li>Número da idade</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Kit Festa na Mesa - Opção 1', 60)">Selecionar</button>
-      </div>
-
-      <div class="card">
-        <h3>Opção 2</h3>
-        <div class="price">R$90,00</div>
-        <ul>
-          <li>Painel 50x50 no tema</li>
-          <li>Mini arco de balões</li>
-          <li>Mesa balcão</li>
-          <li>Bandejas</li>
-          <li>Número da idade</li>
-          <li>Nome do aniversariante</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Kit Festa na Mesa - Opção 2', 90)">Selecionar</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="doces">
-    <div class="section-title">
-      <h2>Doces e Sobremesas</h2>
-      <p>A pessoa pode escolher mais de uma opção e seguir quando desejar.</p>
-    </div>
-
-    <div class="aviso">
-      Você pode selecionar quantas sobremesas quiser. Esta categoria não avança automaticamente.
-    </div>
-
-    <div class="menu-list">
-      <div class="menu-item">
-        <div class="menu-info"><span>Pavê Tradicional</span> <strong>R$85,00</strong></div>
-        <button class="small-btn" onclick="toggleItem(this, 'Pavê Tradicional', 85)">Selecionar</button>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-info"><span>Pavê Sonho de Valsa</span> <strong>R$110,00</strong></div>
-        <button class="small-btn" onclick="toggleItem(this, 'Pavê Sonho de Valsa', 110)">Selecionar</button>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-info"><span>Bombom de Uva Cremoso</span> <strong>R$95,00</strong></div>
-        <button class="small-btn" onclick="toggleItem(this, 'Bombom de Uva Cremoso', 95)">Selecionar</button>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-info"><span>Mousse de Maracujá com Ganache</span> <strong>R$95,00</strong></div>
-        <button class="small-btn" onclick="toggleItem(this, 'Mousse de Maracujá com Ganache', 95)">Selecionar</button>
-      </div>
-
-      <div class="menu-item">
-        <div class="menu-info"><span>Gelatina Recheada</span> <strong>R$75,00</strong></div>
-        <button class="small-btn" onclick="toggleItem(this, 'Gelatina Recheada', 75)">Selecionar</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="bolos">
-    <div class="section-title">
-      <h2>Bolos Especiais</h2>
-      <p>Formato 3 — aproximadamente 2,5 kg a 3 kg.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Bolo de Coco Gelado</h3>
-        <div class="price">R$90,00</div>
-        <p>Recheio cremoso de coco.</p>
-        <button class="select-btn" onclick="toggleItem(this, 'Bolo de Coco Gelado', 90)">Selecionar</button>
-      </div>
-
-      <div class="card">
-        <h3>Os Queridinhos</h3>
-        <div class="price">R$135,00</div>
-        <p>Recheio cremoso de ninho ou doce de leite com ameixa ou coco.</p>
-        <button class="select-btn" onclick="toggleItem(this, 'Bolo Os Queridinhos', 135)">Selecionar</button>
-      </div>
-
-      <div class="card">
-        <h3>Premium Chocolatudo</h3>
-        <div class="price">R$160,00</div>
-        <p>Recheio cremoso de brigadeiro ou prestígio, com massa e calda de chocolate.</p>
-        <button class="select-btn" onclick="toggleItem(this, 'Bolo Premium Chocolatudo', 160)">Selecionar</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="adicionais">
-    <div class="section-title">
-      <h2>Adicionais</h2>
-      <p>Finalize com doces, salgados ou outros complementos.</p>
-    </div>
-
-    <div class="aviso">
-      Você pode selecionar mais de um adicional. Esta categoria não avança automaticamente.
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Doces</h3>
-        <ul>
-          <li>Brigadeiro — R$120,00 o cento</li>
-          <li>Beijinho — R$120,00 o cento</li>
-          <li>Maçã com cobertura — R$7,00 cada</li>
-          <li>Mini donuts — R$5,00 cada</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Brigadeiro - cento', 120)">Brigadeiro</button>
-        <button class="select-btn" onclick="toggleItem(this, 'Beijinho - cento', 120)">Beijinho</button>
-        <button class="select-btn" onclick="toggleItem(this, 'Maçã com cobertura - unidade', 7)">Maçã</button>
-        <button class="select-btn" onclick="toggleItem(this, 'Mini donuts - unidade', 5)">Mini donuts</button>
-      </div>
-
-      <div class="card">
-        <h3>Salgados</h3>
-        <ul>
-          <li>Torta de frango — R$95,00</li>
-          <li>Torta de sardinha ou atum — R$130,00</li>
-          <li>Salgados fritos — R$160,00 o cento</li>
-        </ul>
-        <button class="select-btn" onclick="toggleItem(this, 'Torta de frango', 95)">Torta de frango</button>
-        <button class="select-btn" onclick="toggleItem(this, 'Torta de sardinha ou atum', 130)">Torta sardinha/atum</button>
-        <button class="select-btn" onclick="toggleItem(this, 'Salgados fritos - cento', 160)">Salgados fritos</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="pagamento">
-    <div class="section-title">
-      <h2>Formas de Pagamento</h2>
-      <p>Escolha a melhor opção para confirmar seu pedido.</p>
-    </div>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Pagamento</h3>
-        <ul>
-          <li>Dinheiro</li>
-          <li>Pix</li>
-          <li>Cartão débito</li>
-          <li>Cartão crédito com acréscimo de taxa</li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h3>Deslocamento</h3>
-        <p>Consultar valor de deslocamento da montagem de acordo com a localização.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta" id="finalizar">
-    <div class="section-title">
-      <h2>Finalize seu orçamento</h2>
-      <p>Preencha os dados da festa se já souber. Esses campos são opcionais.</p>
-
-      <div class="dados-orcamento">
-        <h3>Dados da festa</h3>
-        <p>Essas informações ajudam no atendimento, mas não são obrigatórias para pedir orçamento.</p>
-
-        <div class="campos">
-          <div class="campo">
-            <label for="dataFesta">Data da festa</label>
-            <input type="date" id="dataFesta" />
-          </div>
-
-          <div class="campo">
-            <label for="horarioFesta">Horário da festa</label>
-            <input type="time" id="horarioFesta" />
-          </div>
-
-          <div class="campo campo-grande">
-            <label for="temaFesta">Tema da festa</label>
-            <input type="text" id="temaFesta" placeholder="Ex: Princesas, Fazendinha, Barbie, Futebol..." />
-          </div>
-
-          <div class="campo campo-grande">
-            <label for="observacoesFesta">Observações</label>
-            <textarea id="observacoesFesta" placeholder="Ex: quantidade de convidados, cores desejadas, local da festa, dúvidas ou pedidos especiais..."></textarea>
-          </div>
+  <main class="container">
+    <section class="hero" aria-label="Bingo Festa Julina">
+      <div class="hero-content">
+        <p class="selo">🎉 Cartela definida pela data de nascimento</p>
+        <h1>Bingo da Lu</h1>
+        <p>Marque sua cartela conforme os números forem cantados. A data de nascimento é pedida só uma vez e a cartela fica salva neste celular.</p>
+        <div class="hero-actions">
+          <button class="botao-julina" id="btnNovaHero">Nova cartela</button>
         </div>
       </div>
+    </section>
 
-      <button class="whatsapp" onclick="abrirPedido()">
-        Ver meu pedido
-      </button>
+    <section class="status-grid" aria-label="Informações da partida">
+      <article class="status-card">
+        <small>Cartelas internas</small>
+        <strong id="totalCartelas">120</strong>
+      </article>
+      <article class="status-card">
+        <small>Minha cartela</small>
+        <strong id="statusCartela">—</strong>
+      </article>
+      <article class="status-card">
+        <small>Base da data</small>
+        <strong id="statusNascimento">—</strong>
+      </article>
+      <article class="status-card">
+        <small>Números cantados</small>
+        <strong id="statusSorteados">0 / 75</strong>
+      </article>
+    </section>
 
-      <br>
+    <div class="game-grid" id="jogo">
 
-      <a class="instagram-link" href="https://www.instagram.com/tudo.dehelena/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Tudo de Helena">
-        <span class="instagram-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4c0 3.2-2.6 5.8-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8C2 4.6 4.6 2 7.8 2zm-.2 2C5.6 4 4 5.6 4 7.6v8.8c0 2 1.6 3.6 3.6 3.6h8.8c2 0 3.6-1.6 3.6-3.6V7.6c0-2-1.6-3.6-3.6-3.6H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/>
-          </svg>
-        </span>
-        @tudo.dehelena
-      </a>
+      <section class="cartela-bingo">
+        <div class="cartela-topo">
+          <div>
+            <h2>Minha cartela</h2>
+            <span class="cartela-id" id="cartelaId">Cartela —</span>
+          </div>
+          <button class="admin-sortear-rapido hidden" id="btnSortearRapido" type="button" aria-label="Sortear próximo número">🎲 Sortear</button>
+          <div class="sorteados-cartela" aria-label="Números sorteados">
+            <div class="sorteados-cartela-topo">
+              <strong>Números sorteados</strong>
+              <span>Último: <b id="numeroAtualCartela">--</b></span>
+            </div>
+            <div class="lista-sorteados lista-sorteados-cartela" id="listaSorteados" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <table aria-label="Cartela de bingo">
+          <thead>
+            <tr><th>B</th><th>I</th><th>N</th><th>G</th><th>O</th></tr>
+          </thead>
+          <tbody id="corpoCartela"></tbody>
+        </table>
+
+        <p class="muted" id="regras">Ganha quem completar uma linha, uma coluna ou uma diagonal.</p>
+      </section>
     </div>
-  </section>
+  </main>
 
-  <footer>
-    <p>Tudo de Helena — Decoração de festas, doces, bolos e kits pegue e monte.</p>
-  </footer>
 
-  <button class="carrinho-btn" onclick="abrirPedido()" aria-label="Abrir carrinho">
-    🛒
-    <span class="contador-carrinho" id="contadorCarrinho">0</span>
-  </button>
+  <dialog id="dataNascimentoDialog">
+    <article class="modal-card">
+      <div class="bandeirinhas">🌽 🎯 🔥 🎯 🌽</div>
+      <h2>Sua cartela</h2>
+      <p>Informe sua data de nascimento uma única vez para definir sua cartela do bingo.</p>
+      <input
+        type="text"
+        id="dataNascimento"
+        placeholder="05/10/1988"
+        aria-label="Data de nascimento"
+        inputmode="numeric"
+        autocomplete="bday"
+        maxlength="10"
+      >
+      <small class="ajuda-data">Formato: dia/mês/ano. Exemplo: 05/10/1988 → 05 + 10 + 1988 = 2003.</small>
+      <small class="senha-erro" id="dataNascimentoErro"></small>
+      <div class="modal-actions">
+        <button class="secondary" id="btnCancelarData" type="button">Cancelar</button>
+        <button id="btnConfirmarData" type="button">Salvar cartela</button>
+      </div>
+    </article>
+  </dialog>
 
-  <div class="toast-guia" id="toastGuia">
-    Item adicionado.
-  </div>
+  <dialog id="senhaDialog">
+    <article class="modal-card">
+      <h2 id="senhaTitulo">Senha para sortear</h2>
+      <p id="senhaDescricao">Digite a senha de administradora para cantar o próximo número.</p>
+      <input type="password" id="senhaSorteio" placeholder="Senha" aria-label="Senha do sorteio" autocomplete="current-password">
+      <small class="senha-erro" id="senhaErro"></small>
+      <div class="modal-actions">
+        <button class="secondary" id="btnCancelarSenha" type="button">Cancelar</button>
+        <button id="btnConfirmarSenha" type="button">Liberar</button>
+      </div>
+    </article>
+  </dialog>
 
-  <div class="fundo-pedido" id="fundoPedido" onclick="fecharAoClicarFora(event)">
-    <div class="pedido-box">
-      <div class="pedido-topo">
-        <h3>Meu pedido</h3>
-        <button class="fechar-pedido" onclick="fecharPedido()">×</button>
+
+  <dialog id="premiosDialog">
+    <article class="modal-card">
+      <div class="bandeirinhas">🎁 🌽 🎯 🎁 🌽</div>
+      <h2>Prêmios secretos</h2>
+      <p id="premiosDescricao"></p>
+      <div class="premios-modos" aria-label="Modo de escolha dos prêmios">
+        <button class="premio-modo ativo" id="btnPremiosPrimeiraVez" type="button">
+          1ª vez
+          <small>01 a 17</small>
+        </button>
+        <button class="premio-modo" id="btnPremiosSegundaVez" type="button">
+          2ª vez
+          <small>01 a 600</small>
+        </button>
+      </div>
+      <p class="premios-dica" id="premiosDica"></p>
+      <p class="premios-resumo" id="premiosMensagem"></p>
+      <p class="premios-resumo" id="premiosResumo">0 prêmios escolhidos</p>
+      <div class="premios-grid" id="premiosGrid" aria-label="Números dos prêmios secretos"></div>
+      <div class="modal-actions">
+        <button class="secondary" id="btnFecharPremios" type="button">Fechar</button>
+        <button class="contrast" id="btnZerarPremios" type="button">Zerar escolhidos</button>
       </div>
 
-      <div class="pedido-total" id="pedidoTotal">
-        Total: R$0,00
+      <div id="premioPopup" class="premio-popup hidden" role="alert" aria-live="assertive">
+        <div class="premio-popup-card" id="premioPopupCard">
+          <button class="premio-popup-fechar" id="btnFecharPremioPopup" type="button" aria-label="Fechar resultado">×</button>
+          <div class="premio-popup-icone" id="premioPopupIcone">🎁</div>
+          <h2 class="premio-popup-titulo" id="premioPopupTitulo">Resultado</h2>
+          <p class="premio-popup-texto" id="premioPopupTexto"></p>
+          <p class="premio-popup-subtexto" id="premioPopupSubtexto"></p>
+        </div>
       </div>
+    </article>
+  </dialog>
 
-      <div class="pedido-lista" id="pedidoLista">
-        Nenhum item selecionado ainda.
-      </div>
-
-      <div class="pedido-acoes">
-        <button class="limpar" onclick="limparPedido()">Limpar pedido</button>
-        <button class="enviar" onclick="enviarWhatsApp()">Enviar pelo WhatsApp</button>
-      </div>
-    </div>
-  </div>
+  <dialog id="bingoDialog">
+    <article class="modal-card">
+      <div class="bandeirinhas">🎊 🌽 🔥 🎯 🔥 🌽 🎊</div>
+      <h2>Parabéns!</h2>
+      <p><strong>BINGO!</strong> Você completou o jogo na cartela <span id="cartelaVencedora">—</span>.</p>
+      <button id="btnFecharDialog">Ê trem bão! Fechar</button>
+    </article>
+  </dialog>
 
   <script>
-    let pedido = [];
-    let audioContext;
+    const CARTELAS = [{"id":"LU-001","grid":[[2,29,44,55,61],[8,18,41,56,64],[13,26,"★",49,75],[12,25,32,54,67],[11,28,35,57,68]]},{"id":"LU-002","grid":[[9,30,41,58,62],[5,29,42,54,71],[2,27,"★",47,65],[7,18,39,52,70],[14,23,35,48,68]]},{"id":"LU-003","grid":[[12,20,44,48,71],[5,19,33,49,65],[3,24,"★",57,75],[4,23,38,60,63],[1,18,37,56,72]]},{"id":"LU-004","grid":[[4,19,33,59,72],[13,27,36,47,73],[3,18,"★",48,75],[2,17,44,57,61],[10,16,45,46,74]]},{"id":"LU-005","grid":[[13,23,31,50,67],[5,20,36,52,61],[11,25,"★",59,71],[14,17,33,57,62],[6,16,39,49,64]]},{"id":"LU-006","grid":[[10,20,31,52,74],[13,18,38,60,65],[1,22,"★",57,72],[5,19,36,54,73],[15,27,32,46,67]]},{"id":"LU-007","grid":[[7,25,39,60,61],[5,16,31,49,67],[6,23,"★",55,63],[13,20,32,52,74],[10,29,44,47,69]]},{"id":"LU-008","grid":[[14,21,43,48,61],[9,20,33,57,74],[12,29,"★",46,71],[15,28,39,50,72],[8,24,32,56,63]]},{"id":"LU-009","grid":[[1,23,37,52,70],[10,21,32,57,67],[7,16,"★",50,69],[8,27,31,55,65],[4,18,36,60,66]]},{"id":"LU-010","grid":[[6,23,33,53,68],[2,28,37,47,64],[8,26,"★",59,66],[15,29,45,49,63],[4,16,32,48,65]]},{"id":"LU-011","grid":[[1,23,36,52,74],[9,29,44,51,72],[14,17,"★",58,66],[7,22,41,54,65],[5,25,42,57,70]]},{"id":"LU-012","grid":[[3,23,35,53,69],[14,22,39,47,72],[11,30,"★",58,71],[10,16,38,56,70],[5,19,45,55,65]]},{"id":"LU-013","grid":[[5,29,44,49,67],[9,20,32,46,74],[6,28,"★",57,72],[4,25,45,53,65],[10,16,42,50,70]]},{"id":"LU-014","grid":[[1,29,45,47,64],[2,16,41,58,70],[12,17,"★",48,75],[4,19,40,55,71],[11,26,35,57,67]]},{"id":"LU-015","grid":[[7,29,37,51,67],[2,27,44,50,70],[15,24,"★",46,68],[4,30,38,52,61],[6,22,31,54,73]]},{"id":"LU-016","grid":[[14,18,34,52,72],[10,27,38,59,68],[8,16,"★",56,67],[7,24,36,49,63],[12,20,39,57,61]]},{"id":"LU-017","grid":[[8,17,40,53,74],[14,22,34,56,72],[4,30,"★",60,67],[2,25,37,50,61],[5,24,43,58,62]]},{"id":"LU-018","grid":[[7,22,36,53,61],[1,24,35,48,68],[6,18,"★",54,71],[10,21,33,56,70],[3,25,31,50,72]]},{"id":"LU-019","grid":[[2,29,36,58,67],[9,22,32,48,72],[5,16,"★",47,64],[12,24,42,52,68],[3,19,31,57,75]]},{"id":"LU-020","grid":[[11,18,41,51,63],[10,20,32,49,67],[3,23,"★",55,64],[9,28,34,54,75],[4,24,44,48,70]]},{"id":"LU-021","grid":[[2,17,40,50,65],[10,22,36,60,74],[1,24,"★",57,62],[9,23,38,51,61],[8,19,34,49,67]]},{"id":"LU-022","grid":[[4,29,39,51,65],[13,21,41,54,71],[15,28,"★",56,66],[1,18,32,60,64],[5,23,33,59,69]]},{"id":"LU-023","grid":[[11,21,32,49,75],[2,28,38,60,67],[10,24,"★",46,61],[7,16,45,54,71],[15,20,43,58,64]]},{"id":"LU-024","grid":[[12,24,34,46,68],[11,28,31,53,64],[14,17,"★",54,70],[5,18,38,47,65],[8,29,36,57,74]]},{"id":"LU-025","grid":[[7,17,34,54,63],[5,16,33,50,62],[15,26,"★",52,64],[13,18,35,47,73],[2,19,37,59,66]]},{"id":"LU-026","grid":[[5,30,45,47,68],[2,19,31,58,62],[10,26,"★",55,69],[8,16,44,59,70],[11,22,34,49,67]]},{"id":"LU-027","grid":[[6,19,37,47,69],[1,16,38,54,74],[15,26,"★",60,70],[7,30,42,59,71],[8,17,31,55,66]]},{"id":"LU-028","grid":[[3,19,31,47,63],[10,30,44,52,73],[2,21,"★",51,69],[7,27,33,53,68],[8,16,32,50,72]]},{"id":"LU-029","grid":[[3,26,37,60,73],[9,27,32,59,70],[8,23,"★",52,63],[11,16,44,53,66],[13,28,39,48,69]]},{"id":"LU-030","grid":[[9,28,40,54,70],[10,16,39,55,67],[11,17,"★",57,68],[12,26,43,59,74],[14,27,33,56,61]]},{"id":"LU-031","grid":[[2,18,33,59,75],[5,19,32,57,68],[8,20,"★",46,67],[6,26,39,47,64],[13,27,35,58,74]]},{"id":"LU-032","grid":[[6,27,44,56,65],[3,24,33,55,67],[13,22,"★",52,71],[15,18,31,47,63],[8,20,40,54,62]]},{"id":"LU-033","grid":[[12,17,41,56,65],[4,26,42,55,74],[15,25,"★",60,72],[13,16,34,46,73],[3,21,35,51,70]]},{"id":"LU-034","grid":[[8,19,43,46,66],[7,22,33,50,72],[11,26,"★",52,63],[15,16,38,60,71],[12,20,44,54,68]]},{"id":"LU-035","grid":[[3,18,34,49,65],[8,26,38,51,75],[7,30,"★",58,73],[4,29,39,56,66],[10,22,35,59,68]]},{"id":"LU-036","grid":[[14,17,34,60,72],[13,27,42,57,68],[3,16,"★",59,71],[5,18,43,50,69],[4,30,38,52,62]]},{"id":"LU-037","grid":[[3,28,41,47,73],[5,19,43,50,62],[14,26,"★",53,66],[1,16,39,48,69],[9,24,36,59,65]]},{"id":"LU-038","grid":[[7,21,43,49,71],[3,22,33,50,73],[10,26,"★",56,67],[11,25,44,51,62],[9,16,40,53,63]]},{"id":"LU-039","grid":[[15,24,31,55,65],[3,19,32,50,73],[13,28,"★",52,63],[10,25,43,53,67],[4,29,45,59,70]]},{"id":"LU-040","grid":[[10,30,32,49,64],[6,17,45,54,70],[11,24,"★",59,69],[8,16,38,52,74],[9,27,39,50,72]]},{"id":"LU-041","grid":[[1,29,38,56,67],[3,24,39,46,61],[8,23,"★",57,73],[9,21,35,53,70],[7,26,36,52,72]]},{"id":"LU-042","grid":[[10,19,37,53,69],[2,25,39,47,64],[15,22,"★",59,66],[13,17,40,56,71],[6,29,35,54,62]]},{"id":"LU-043","grid":[[8,18,35,51,75],[13,16,37,48,64],[9,19,"★",60,68],[10,20,44,47,70],[5,21,32,56,74]]},{"id":"LU-044","grid":[[1,29,39,56,75],[11,16,38,60,66],[15,30,"★",58,69],[8,23,34,53,61],[5,20,45,50,72]]},{"id":"LU-045","grid":[[7,28,44,53,61],[8,24,38,51,68],[13,19,"★",52,71],[15,16,32,49,74],[14,17,31,46,72]]},{"id":"LU-046","grid":[[7,19,32,60,74],[9,16,40,56,75],[15,27,"★",51,71],[6,23,45,50,68],[4,29,44,46,62]]},{"id":"LU-047","grid":[[9,18,36,50,73],[1,21,34,51,71],[13,22,"★",55,62],[3,23,41,46,63],[14,26,37,58,65]]},{"id":"LU-048","grid":[[9,21,42,49,74],[3,20,39,50,71],[12,28,"★",55,73],[6,16,45,46,70],[11,27,35,47,63]]},{"id":"LU-049","grid":[[11,18,41,47,65],[7,27,35,59,68],[4,16,"★",56,63],[12,23,36,53,69],[8,21,42,46,73]]},{"id":"LU-050","grid":[[3,22,38,56,74],[2,28,37,54,61],[15,18,"★",57,66],[9,30,45,60,63],[10,19,36,48,62]]},{"id":"LU-051","grid":[[8,29,40,50,75],[1,16,33,53,62],[5,24,"★",55,61],[11,18,42,48,69],[10,28,44,51,74]]},{"id":"LU-052","grid":[[12,22,38,56,65],[14,19,43,52,61],[10,20,"★",49,68],[7,25,32,47,62],[15,29,36,60,63]]},{"id":"LU-053","grid":[[3,28,34,49,65],[7,26,41,56,71],[14,29,"★",54,69],[13,19,32,52,75],[1,21,43,60,61]]},{"id":"LU-054","grid":[[15,20,34,56,69],[3,21,39,58,73],[12,18,"★",48,66],[13,26,35,47,72],[8,30,31,52,71]]},{"id":"LU-055","grid":[[14,17,32,46,65],[3,24,38,48,68],[11,30,"★",49,73],[1,27,40,57,70],[10,20,36,53,64]]},{"id":"LU-056","grid":[[5,29,35,49,74],[4,19,32,54,72],[8,20,"★",50,62],[3,27,39,51,64],[12,22,40,46,75]]},{"id":"LU-057","grid":[[14,22,32,50,64],[15,18,44,60,61],[1,17,"★",51,75],[10,25,45,55,67],[7,19,42,52,63]]},{"id":"LU-058","grid":[[9,16,35,60,73],[12,25,38,55,71],[6,18,"★",59,64],[2,19,34,49,75],[13,22,43,47,70]]},{"id":"LU-059","grid":[[15,23,42,58,64],[10,24,35,48,61],[13,16,"★",46,75],[8,27,45,54,74],[1,21,40,51,62]]},{"id":"LU-060","grid":[[1,29,43,52,75],[7,26,33,50,64],[13,25,"★",60,66],[6,21,35,57,69],[4,18,31,47,72]]},{"id":"LU-061","grid":[[10,24,32,48,73],[3,22,40,57,65],[8,21,"★",51,72],[4,26,42,56,74],[2,20,34,49,61]]},{"id":"LU-062","grid":[[3,25,41,50,63],[2,26,37,51,71],[12,30,"★",48,64],[10,24,31,58,72],[15,28,33,52,68]]},{"id":"LU-063","grid":[[4,22,41,46,62],[1,24,37,48,63],[5,21,"★",55,65],[11,30,45,52,74],[9,20,39,56,64]]},{"id":"LU-064","grid":[[15,26,38,55,63],[5,17,32,60,65],[2,25,"★",56,66],[12,22,42,59,62],[1,23,39,47,67]]},{"id":"LU-065","grid":[[8,24,45,59,63],[2,18,32,48,65],[4,22,"★",60,66],[11,19,39,53,74],[5,20,37,56,61]]},{"id":"LU-066","grid":[[15,21,33,54,67],[2,27,36,49,65],[6,26,"★",60,70],[10,29,32,51,72],[1,24,37,47,62]]},{"id":"LU-067","grid":[[6,17,33,55,73],[11,27,32,58,67],[9,29,"★",59,64],[8,24,37,57,65],[5,16,36,51,69]]},{"id":"LU-068","grid":[[9,19,41,57,67],[6,28,31,52,68],[3,16,"★",46,63],[11,18,37,50,71],[15,24,33,53,61]]},{"id":"LU-069","grid":[[8,26,38,47,66],[15,25,40,46,69],[7,24,"★",58,74],[2,17,35,50,63],[5,27,43,52,73]]},{"id":"LU-070","grid":[[2,21,35,58,61],[7,29,42,46,72],[9,17,"★",56,65],[14,30,37,59,63],[1,28,38,51,70]]},{"id":"LU-071","grid":[[2,18,31,50,66],[3,23,38,53,64],[1,26,"★",60,69],[7,30,36,57,70],[9,24,44,58,63]]},{"id":"LU-072","grid":[[8,24,38,59,74],[6,23,36,58,68],[1,19,"★",49,61],[10,25,32,47,70],[3,29,31,54,63]]},{"id":"LU-073","grid":[[11,20,38,49,65],[2,21,34,46,61],[8,24,"★",57,70],[5,25,45,58,67],[10,27,35,50,72]]},{"id":"LU-074","grid":[[2,26,45,58,65],[5,24,37,55,74],[11,28,"★",57,69],[4,27,35,54,61],[14,30,40,56,75]]},{"id":"LU-075","grid":[[8,22,45,47,75],[6,23,40,46,71],[12,19,"★",60,67],[4,18,35,50,65],[10,20,36,51,74]]},{"id":"LU-076","grid":[[10,18,43,60,62],[14,28,35,48,69],[4,29,"★",56,65],[8,16,37,53,74],[6,19,38,49,64]]},{"id":"LU-077","grid":[[4,30,32,48,68],[13,20,36,57,69],[6,19,"★",54,66],[8,25,37,47,72],[3,26,39,46,74]]},{"id":"LU-078","grid":[[3,20,40,56,73],[8,16,43,46,67],[4,19,"★",55,61],[10,27,45,54,69],[14,23,33,60,75]]},{"id":"LU-079","grid":[[6,19,41,55,62],[5,22,38,46,65],[4,26,"★",56,69],[15,21,35,51,64],[10,17,33,47,70]]},{"id":"LU-080","grid":[[10,18,40,60,68],[9,21,41,47,70],[2,17,"★",58,66],[4,26,44,54,69],[3,27,33,56,67]]},{"id":"LU-081","grid":[[2,29,41,60,68],[10,19,39,50,61],[5,30,"★",56,63],[7,23,32,51,69],[1,27,33,58,75]]},{"id":"LU-082","grid":[[1,27,44,57,75],[8,18,39,48,64],[3,29,"★",51,62],[14,28,36,54,73],[4,24,41,46,72]]},{"id":"LU-083","grid":[[4,28,42,53,71],[14,18,34,55,69],[3,17,"★",52,73],[12,25,36,49,64],[10,30,45,50,67]]},{"id":"LU-084","grid":[[12,21,42,54,63],[13,20,44,49,74],[6,30,"★",52,68],[11,26,43,59,75],[15,28,41,46,62]]},{"id":"LU-085","grid":[[10,20,36,50,64],[8,19,40,60,68],[9,16,"★",48,65],[1,29,35,59,63],[12,30,45,56,66]]},{"id":"LU-086","grid":[[14,27,31,57,69],[5,18,39,51,74],[10,29,"★",54,67],[15,17,41,60,63],[4,23,35,53,71]]},{"id":"LU-087","grid":[[11,28,35,56,69],[1,21,38,52,71],[15,27,"★",58,61],[14,26,31,60,64],[12,30,40,59,73]]},{"id":"LU-088","grid":[[8,23,42,55,70],[4,26,40,60,68],[3,29,"★",49,71],[14,27,34,59,66],[15,22,44,54,69]]},{"id":"LU-089","grid":[[6,28,44,59,62],[10,30,45,57,65],[11,22,"★",54,73],[8,21,31,60,70],[5,19,34,47,64]]},{"id":"LU-090","grid":[[6,23,35,52,63],[14,21,43,54,73],[1,24,"★",47,74],[2,20,41,59,75],[13,28,42,55,62]]},{"id":"LU-091","grid":[[13,30,33,49,74],[2,24,42,51,72],[5,25,"★",56,75],[4,18,32,53,68],[6,28,34,59,63]]},{"id":"LU-092","grid":[[12,18,38,50,65],[4,24,40,48,75],[6,20,"★",54,67],[1,19,33,47,69],[3,30,43,51,61]]},{"id":"LU-093","grid":[[14,21,44,57,71],[2,25,45,53,72],[13,29,"★",58,68],[6,17,40,56,62],[15,30,43,47,67]]},{"id":"LU-094","grid":[[7,29,33,56,74],[2,26,44,46,64],[14,24,"★",52,69],[8,28,36,59,61],[1,22,32,53,75]]},{"id":"LU-095","grid":[[7,24,44,56,69],[6,19,33,55,66],[3,29,"★",52,70],[15,20,38,51,64],[5,27,45,46,75]]},{"id":"LU-096","grid":[[10,18,43,60,74],[9,28,41,49,68],[3,17,"★",46,64],[14,16,36,54,61],[13,19,40,51,73]]},{"id":"LU-097","grid":[[4,19,39,59,68],[15,30,32,54,61],[14,28,"★",50,62],[1,22,42,58,75],[12,24,34,53,73]]},{"id":"LU-098","grid":[[3,19,44,54,74],[5,29,32,48,63],[13,27,"★",56,70],[8,21,45,46,61],[1,16,35,51,68]]},{"id":"LU-099","grid":[[5,19,37,51,61],[15,18,45,57,74],[11,17,"★",60,69],[4,21,39,47,66],[14,27,42,53,64]]},{"id":"LU-100","grid":[[15,22,39,50,71],[9,16,43,59,74],[14,17,"★",57,63],[5,26,33,46,65],[7,21,45,48,67]]},{"id":"LU-101","grid":[[10,17,43,57,65],[6,28,31,53,64],[2,24,"★",55,72],[12,16,41,49,70],[7,30,37,56,66]]},{"id":"LU-102","grid":[[14,18,40,47,66],[4,25,36,49,73],[5,28,"★",52,63],[2,29,38,50,65],[6,23,37,56,75]]},{"id":"LU-103","grid":[[13,23,36,54,70],[2,17,45,55,63],[6,16,"★",58,61],[15,20,37,57,74],[14,24,42,51,62]]},{"id":"LU-104","grid":[[12,21,39,51,63],[9,27,42,55,64],[5,24,"★",58,75],[8,29,35,50,73],[13,28,37,52,72]]},{"id":"LU-105","grid":[[4,28,40,55,63],[9,17,35,46,66],[6,22,"★",52,65],[11,27,44,58,64],[10,29,32,57,69]]},{"id":"LU-106","grid":[[14,29,33,49,67],[1,23,31,53,71],[13,30,"★",50,68],[7,26,38,51,61],[3,18,44,46,74]]},{"id":"LU-107","grid":[[7,16,43,48,75],[13,26,39,46,66],[6,29,"★",56,71],[14,17,32,54,61],[8,24,36,49,63]]},{"id":"LU-108","grid":[[7,22,41,57,72],[8,28,37,52,61],[10,24,"★",51,69],[3,17,34,48,62],[11,25,44,54,67]]},{"id":"LU-109","grid":[[13,24,35,49,73],[1,17,36,55,75],[15,16,"★",56,67],[5,20,37,52,63],[10,23,33,47,68]]},{"id":"LU-110","grid":[[9,18,41,58,70],[3,20,33,51,72],[14,26,"★",50,67],[2,17,44,48,63],[10,19,35,60,73]]},{"id":"LU-111","grid":[[4,16,35,52,74],[15,23,37,58,62],[11,22,"★",60,61],[5,28,45,59,75],[3,19,36,50,64]]},{"id":"LU-112","grid":[[4,29,41,49,75],[2,26,33,47,61],[5,23,"★",52,70],[12,27,32,54,62],[6,21,42,57,67]]},{"id":"LU-113","grid":[[12,24,44,54,72],[11,16,39,57,69],[7,27,"★",47,64],[6,18,40,50,70],[2,20,35,56,63]]},{"id":"LU-114","grid":[[14,22,37,48,70],[11,27,36,55,61],[1,19,"★",49,75],[6,28,44,60,66],[13,16,38,51,69]]},{"id":"LU-115","grid":[[7,27,36,59,74],[12,19,32,51,71],[10,23,"★",53,72],[6,20,41,58,73],[2,30,40,49,68]]},{"id":"LU-116","grid":[[4,20,33,53,61],[9,17,37,47,72],[6,18,"★",49,73],[3,21,41,54,71],[2,19,34,56,68]]},{"id":"LU-117","grid":[[9,19,44,46,70],[1,25,35,57,66],[6,17,"★",50,65],[13,21,45,51,72],[5,20,43,52,71]]},{"id":"LU-118","grid":[[15,24,35,46,71],[2,21,41,58,66],[3,20,"★",49,61],[4,22,31,52,75],[8,28,42,54,62]]},{"id":"LU-119","grid":[[9,24,33,51,69],[15,23,35,58,74],[13,16,"★",60,70],[2,27,32,46,75],[7,25,44,55,68]]},{"id":"LU-120","grid":[[4,17,32,54,72],[2,22,41,50,64],[6,27,"★",57,63],[1,21,38,47,74],[15,20,44,48,66]]}];
 
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
+    const MENSAGENS_ENGRACADAS = [
+      "🐈‍⬛ Dizem que gato preto dá azar... dá não, querida: ele vende o melhor lanche! 🍔✨",
+      "👑 Querida, você pode brilhar feito rainha na tua festa se TUDO DE HELENA for a organização. ✨🎉",
+      "Hum, querida, tá indo bem! 💅✨",
+      "Ual! Olha ela!!!!! 👀💖",
+      "Gentcheeee, calma querida! 🫣🌈",
+      "Não creio, mulher!! 😱💃",
+      "Olha a diva indo bem! 👑✨",
+      "Manda ver, querida! 💅🔥",
+      "Arrasou, meu amor! 🌟💖",
+      "Tá servindo bingo e beleza! 🎱💄",
+      "Olha ela marcando plena! 💅😌",
+      "Que isso, Brasil? 🇧🇷😱",
+      "Segura essa emoção! 🫶✨",
+      "Tá quase virando lenda! 👑📣",
+      "Bingo com glamour! 🎯💋",
+      "A senhora está impossível! 💃🔥",
+      "Chama o close! 📸✨",
+      "Ela veio pra vencer! 🏆💅",
+      "Meu bem, que performance! 🎭💖",
+      "Tá brilhando mais que bandeirinha! 🚩✨",
+      "O arraial não estava preparado! 🌽🌈",
+      "Marca com fé, querida! 🙏💅",
+      "Avisa que é ela! 📣👑",
+      "Que luxo de marcação! 💎🎯",
+      "Tá jogando fino! ✨🎱",
+      "Pisa menos, diva! 👠🔥",
+      "Olha o talento vindo! 🌟💃",
+      "Essa cartela tá babadeira! 💖🎯",
+      "Mulher, você tá voando! 🪽💅",
+      "A energia de campeã veio! 🏆✨",
+      "Já pode pedir música? 🎶👑",
+      "Tá dando trabalho pras concorrentes! 🔥👀",
+      "A cartela sentiu o poder! ⚡💅",
+      "Essa quadrilha virou passarela, diva! 🌈🚩",
+      "Olha o close no arraiá, meu amor! 📸🌽",
+      "Bandeirinha nenhuma brilha mais que você! 🚩✨",
+      "Milho, paçoca e muita presença! 🌽💅",
+      "O correio elegante mandou: arrasou! 💌💖",
+      "Segura o chapéu que a diva tá vindo! 🤠👑",
+      "Esse bingo tá mais quente que fogueira! 🔥🎯",
+      "A fogueira acendeu só com esse talento! 🔥💃",
+      "A quadrilha parou pra te assistir! 💃🕺",
+      "Você tá mais rara que prêmio bom de bingo! 🏆🌈",
+      "São João abençoou essa marcação! 🎆💅",
+      "Tá dançando xote em cima da concorrência! 🪗👠",
+      "Essa cartela tá puro glitter junino! ✨🚩",
+      "O arraiá inteiro gritou: ícone! 📣🌈",
+      "Pamonha passada? Não, diva concentrada! 🌽💖",
+      "A fogueira subiu porque a diva marcou! 🔥💅",
+      "Chama a quadrilha, que o close foi histórico! 🪗📸",
+      "A bandeirinha piscou de inveja, meu bem! 🚩👀",
+      "O chapéu é de palha, mas o brilho é de milhões! 🤠✨",
+      "Pisa na roça, mas pisa com glamour! 🌽👠",
+      "Essa marcação veio com purpurina junina! ✨🎯",
+      "Meu amor, o milho até virou pipoca de emoção! 🌽🍿",
+      "A sanfona desafinou com tanta presença! 🪗💃",
+      "O correio elegante pediu autógrafo! 💌👑",
+      "Arraiá em choque com essa potência! 🌈😱",
+      "Isso não é cartela, é passarela! 🎯👠",
+      "Bafão no terreiro: ela marcou de novo! 🔥🚩",
+      "A rainha do milho acaba de passar! 🌽👑",
+      "Esse clique veio perfumado de vitória! 💐🏆",
+      "A quentãozada tremeu com essa marcação! 🔥😌",
+      "Mulher, que bingo mais sapatinho de cristal! 👠✨",
+      "O padre da quermesse até benzeu esse talento! 🙏🌈",
+      "A fogueira tá baixa perto desse brilho! 🔥💎",
+      "A quadrilha gritou: olha a campeã! 🪗🏆",
+      "Glamour, paçoca e estratégia, querida! 💅🥜",
+      "Essa diva não marca, ela lacra número! 💋🎯",
+      "O arraiá virou baile de gala! 🚩👑",
+      "A barraca do beijo pediu licença pro close! 💋📸",
+      "O bingo tá junino, mas o luxo é internacional! 🌽✈️",
+      "A senhora veio armada de charme e cartela! 💅🎱",
+      "Olha a chuva de glamour! Já passou! 🌧️✨",
+      "O milho cozinhou só de te ver jogar! 🌽🔥",
+      "A paçoca esfarelou com esse impacto! 🥜😱",
+      "Isso aqui é bingo ou desfile de ícone? 👑🎯",
+      "A roça nunca viu tanta elegância! 🌾💖",
+      "Meu bem, você clicou e o arraiá aplaudiu! 👏🚩",
+      "A fogueira pediu CPF depois desse lacre! 🔥🪪",
+      "Cartela marcada, autoestima renovada! 💅💖",
+      "O glitter caiu do céu só pra essa jogada! ✨🌈",
+      "Essa marcação veio de salto alto! 👠🎯"
+];
 
-    window.addEventListener("load", function() {
-      if (window.location.hash) {
-        history.replaceState(null, "", window.location.pathname + window.location.search);
-      }
+    const corpoCartela = document.getElementById("corpoCartela");
+    const cartelaId = document.getElementById("cartelaId");
+    const statusCartela = document.getElementById("statusCartela");
+    const statusNascimento = document.getElementById("statusNascimento");
+    const totalCartelas = document.getElementById("totalCartelas");
+    const statusSorteados = document.getElementById("statusSorteados");
+    const listaSorteados = document.getElementById("listaSorteados");
+    const listaSorteadosMenu = document.getElementById("listaSorteadosMenu");
+    const numeroAtual = document.getElementById("numeroAtual");
+    const numeroAtualCartela = document.getElementById("numeroAtualCartela");
+    const statusConexao = document.getElementById("statusConexao");
+    const btnAbrirMenu = document.getElementById("btnAbrirMenu");
+    const btnFecharMenu = document.getElementById("btnFecharMenu");
+    const menuLateral = document.getElementById("menuLateral");
+    const menuBackdrop = document.getElementById("menuBackdrop");
+    const bingoDialog = document.getElementById("bingoDialog");
+    const senhaDialog = document.getElementById("senhaDialog");
+    const senhaTitulo = document.getElementById("senhaTitulo");
+    const senhaDescricao = document.getElementById("senhaDescricao");
+    const senhaInput = document.getElementById("senhaSorteio");
+    const senhaErro = document.getElementById("senhaErro");
+    const senhaConfirmar = document.getElementById("btnConfirmarSenha");
+    const cartelaVencedora = document.getElementById("cartelaVencedora");
+    const dataNascimentoDialog = document.getElementById("dataNascimentoDialog");
+    const dataNascimentoInput = document.getElementById("dataNascimento");
+    const dataNascimentoErro = document.getElementById("dataNascimentoErro");
+    const mensagemEngracada = document.getElementById("mensagemEngracada");
+    const btnSortearMenu = document.getElementById("btnSortear");
+    const btnSortearRapido = document.getElementById("btnSortearRapido");
+    let mensagemEngracadaTimer = null;
 
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "auto"
-      });
-    });
+    /*
+      CONFIGURAÇÃO GOOGLE SHEETS
+      1) Crie um Apps Script ligado à sua planilha.
+      2) Cole nele o código do arquivo "apps_script_google_sheets_bingo_casa_da_lu_com_cartelas.gs.txt".
+      3) Publique como Web App e cole a URL aqui embaixo.
+      4) A planilha terá as abas "Sorteados" e "Cartelas" para impedir cartela repetida na mesma rodada.
+    */
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyRwX-W45lBJlokoH4Po6MeaVPbVSsnn0vTtW6NDr49IO4fXqq4rj9u5E-JyQQ1NUBF/exec";
 
-    const ordemCategorias = {
-      pegue: {
-        proxima: "mesa",
-        texto: "Item adicionado. Indo para Montagem de Mesa."
+    // Usada apenas no modo local/teste. Com Google Sheets configurado, a senha certa fica no Apps Script.
+    const SENHA_LOCAL_TESTE = "Lu&Ro";
+    const AUTO_ATUALIZAR_MS = 3000;
+    const CHAVE_LOCAL_STORAGE = "bingo_casa_da_lu_numeros_sorteados";
+    const CHAVE_CARTELA_USUARIO = "bingo_casa_da_lu_cartela_usuario_v2";
+    const CHAVE_DISPOSITIVO_ID = "bingo_casa_da_lu_dispositivo_id_v1";
+    const CHAVE_MARCACOES_CARTELA = "bingo_casa_da_lu_marcacoes_cartela_v1";
+    const CHAVE_PARTIDA_ATUAL = "bingo_casa_da_lu_partida_atual_v1";
+    const CHAVE_PREMIOS_ESCOLHIDOS = "bingo_casa_da_lu_premios_escolhidos_v1";
+    const CHAVE_PREMIOS_POSICOES_600 = "bingo_casa_da_lu_premios_posicoes_600_v1";
+    const CHAVE_PREMIOS_MODO = "bingo_casa_da_lu_premios_modo_v1";
+    const CHAVE_MENSAGENS_USADAS = "bingo_casa_da_lu_mensagens_usadas_v2";
+    const CHAVE_MENSAGENS_PRIORITARIAS_OK = "bingo_casa_da_lu_mensagens_prioritarias_ok_v1";
+    const MENSAGENS_PRIORITARIAS_INICIAIS = [0, 1];
+    const TOTAL_PREMIOS_SECRETOS = 17;
+    const TOTAL_POSICOES_PREMIOS_SEGUNDA_VEZ = 600;
+    const POSICOES_PREMIADAS_SEGUNDA_VEZ = [63, 43, 86, 112, 159, 204, 238, 276, 319, 347, 389, 421, 468, 502, 537, 571, 596];
+    const MAPA_PREMIOS_SEGUNDA_VEZ = {
+      63: 7,
+      43: 13,
+      86: 2,
+      112: 16,
+      159: 15,
+      204: 5,
+      238: 11,
+      276: 1,
+      319: 17,
+      347: 4,
+      389: 14,
+      421: 8,
+      468: 3,
+      502: 12,
+      537: 6,
+      571: 10,
+      596: 9
+    };
+    const ORDEM_BACKUP_PREMIOS_SEGUNDA_VEZ = [15, 7, 13, 2, 16, 5, 11, 1, 17, 4, 14, 8, 3, 12, 6, 10, 9];
+    const PREMIOS_EXTRAS_SEGUNDA_VEZ = {
+      pacoca: {
+        nome: "10 paçocas",
+        emoji: "🥜",
+        posicoes: [18, 74, 127, 181, 226, 294, 361, 433, 489, 552]
       },
-      mesa: {
-        proxima: "festa",
-        texto: "Item adicionado. Indo para Kit Festa na Mesa."
+      abraco: {
+        nome: "você ganhou um abraço",
+        emoji: "🫂",
+        posicoes: [31, 102, 146, 215, 269, 333, 405, 456, 524, 583]
       },
-      festa: {
-        proxima: "doces",
-        texto: "Item adicionado. Indo para Doces e Sobremesas."
-      },
-      bolos: {
-        proxima: "adicionais",
-        texto: "Item adicionado. Indo para Adicionais."
+      aperto: {
+        nome: "você ganhou um aperto de mão",
+        emoji: "🤝",
+        posicoes: [57, 119, 174, 249, 307, 376, 441, 513, 566, 600]
       }
     };
 
-    function irParaOrcamento(event) {
-      event.preventDefault();
+    let cartelaAtual = null;
+    let numerosSorteados = [];
+    let bingoCelebrado = false;
+    let audioCtx = null;
+    let atualizacaoTimer = null;
+    let pedidoSenhaResolve = null;
+    let pedidoDataResolve = null;
+    let pedidoDataPromise = null;
+    let garantiaCartelaEmAndamento = null;
+    let senhaAdministradoraSessao = "";
+    let sorteioEmAndamento = false;
+    let premioPopupTimer = null;
 
-      const destino = document.getElementById("pegue");
+    totalCartelas.textContent = CARTELAS.length;
 
-      if (destino) {
-        destino.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+    function iniciarAudio() {
+      if (!audioCtx) {
+        audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      if (audioCtx.state === "suspended") {
+        audioCtx.resume();
       }
     }
 
-    function tocarSomClique() {
-      try {
-        if (!audioContext) {
-          audioContext = new (window.AudioContext || window.webkitAudioContext)();
-        }
+    function tocarToque(tipo = "toque") {
+      if (!audioCtx) return;
 
-        const oscilador = audioContext.createOscillator();
-        const ganho = audioContext.createGain();
+      const agora = audioCtx.currentTime;
+      const ganho = audioCtx.createGain();
+      ganho.connect(audioCtx.destination);
 
-        oscilador.type = "sine";
-        oscilador.frequency.setValueAtTime(620, audioContext.currentTime);
+      const notas = tipo === "bingo"
+        ? [523.25, 659.25, 783.99, 1046.5]
+        : [740, 980];
 
-        ganho.gain.setValueAtTime(0.06, audioContext.currentTime);
-        ganho.gain.exponentialRampToValueAtTime(0.001, audioContext.currentTime + 0.08);
-
-        oscilador.connect(ganho);
-        ganho.connect(audioContext.destination);
-
-        oscilador.start();
-        oscilador.stop(audioContext.currentTime + 0.08);
-      } catch (erro) {
-        console.log("Som de clique não pôde ser reproduzido.");
-      }
-    }
-
-    function formatarPreco(valor) {
-      return valor.toLocaleString("pt-BR", {
-        style: "currency",
-        currency: "BRL"
+      notas.forEach((freq, index) => {
+        const osc = audioCtx.createOscillator();
+        const g = audioCtx.createGain();
+        osc.type = tipo === "bingo" ? "triangle" : "sine";
+        osc.frequency.setValueAtTime(freq, agora + index * 0.11);
+        g.gain.setValueAtTime(0.0001, agora + index * 0.11);
+        g.gain.exponentialRampToValueAtTime(0.18, agora + index * 0.11 + 0.02);
+        g.gain.exponentialRampToValueAtTime(0.0001, agora + index * 0.11 + 0.16);
+        osc.connect(g);
+        g.connect(ganho);
+        osc.start(agora + index * 0.11);
+        osc.stop(agora + index * 0.11 + 0.18);
       });
     }
 
-    function formatarData(data) {
-      if (!data) return "";
+    // Sorteio seguro no navegador: usa Web Crypto e rejeição para evitar viés de módulo.
+    function inteiroAleatorioSeguro(maxExclusivo) {
+      if (!Number.isInteger(maxExclusivo) || maxExclusivo <= 0) {
+        throw new Error("Limite inválido para sorteio.");
+      }
 
-      const partes = data.split("-");
-      return `${partes[2]}/${partes[1]}/${partes[0]}`;
+      if (!window.crypto || !window.crypto.getRandomValues) {
+        throw new Error("Este navegador não oferece crypto.getRandomValues().");
+      }
+
+      const limite = Math.floor(0xFFFFFFFF / maxExclusivo) * maxExclusivo;
+      const buffer = new Uint32Array(1);
+      let valor;
+
+      do {
+        window.crypto.getRandomValues(buffer);
+        valor = buffer[0];
+      } while (valor >= limite);
+
+      return valor % maxExclusivo;
     }
 
-    function toggleItem(botao, nome, preco) {
-      const index = pedido.findIndex(item => item.nome === nome);
-      const estaSelecionando = index === -1;
+    function googleSheetsConfigurado() {
+      return GOOGLE_SCRIPT_URL.trim().startsWith("https://script.google.com/");
+    }
 
-      if (estaSelecionando) {
-        pedido.push({ nome, preco });
-        botao.textContent = "Selecionado";
-        botao.classList.add("selected-btn");
+    function obterOuCriarDispositivoId() {
+      try {
+        const salvo = localStorage.getItem(CHAVE_DISPOSITIVO_ID);
+        if (salvo) return salvo;
 
-        const card = botao.closest(".card");
-        if (card) {
-          card.classList.add("selected");
+        const novoId = (window.crypto && typeof window.crypto.randomUUID === "function")
+          ? window.crypto.randomUUID()
+          : "disp-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+
+        localStorage.setItem(CHAVE_DISPOSITIVO_ID, novoId);
+        return novoId;
+      } catch {
+        return "disp-temporario-" + Date.now() + "-" + Math.random().toString(36).slice(2);
+      }
+    }
+
+    function encontrarIndiceCartelaPorId(cartelaIdBusca) {
+      const id = String(cartelaIdBusca || "").trim();
+      return CARTELAS.findIndex(cartela => cartela.id === id);
+    }
+
+    function definirStatus(mensagem, tipo = "warn") {
+      statusConexao.textContent = mensagem || "";
+      statusConexao.classList.remove("ok", "warn", "erro");
+
+      if (!mensagem) {
+        statusConexao.classList.add("hidden");
+        return;
+      }
+
+      statusConexao.classList.remove("hidden");
+      statusConexao.classList.add(tipo);
+    }
+
+    function interpretarRespostaAppsScript(texto) {
+      const respostaTexto = String(texto || "").trim();
+
+      if (!respostaTexto) {
+        throw new Error("O Apps Script respondeu vazio.");
+      }
+
+      let resposta;
+
+      try {
+        resposta = JSON.parse(respostaTexto);
+      } catch (erro) {
+        throw new Error("O Apps Script não devolveu JSON válido. Confira se o Web App foi publicado com acesso para qualquer pessoa.");
+      }
+
+      if (!resposta || resposta.ok === false) {
+        throw new Error(resposta && (resposta.erro || resposta.mensagem) ? (resposta.erro || resposta.mensagem) : "Resposta inválida do Google Sheets.");
+      }
+
+      return resposta;
+    }
+
+    function extrairEstadoDaResposta(resposta) {
+      return resposta && resposta.estado ? resposta.estado : resposta;
+    }
+
+    function extrairNumerosDaResposta(resposta) {
+      const estado = extrairEstadoDaResposta(resposta);
+      return normalizarNumeros(estado && estado.numeros ? estado.numeros : []);
+    }
+
+    async function chamarAppsScript(parametros = {}, metodo = "GET") {
+      if (!googleSheetsConfigurado()) {
+        throw new Error("URL do Apps Script não configurada.");
+      }
+
+      const acao = parametros.acao || "listar";
+
+      if (metodo === "POST") {
+        try {
+          const resposta = await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            headers: { "Content-Type": "text/plain;charset=utf-8" },
+            body: JSON.stringify(parametros),
+            redirect: "follow"
+          });
+
+          const texto = await resposta.text();
+
+          if (!resposta.ok) {
+            throw new Error(`Erro HTTP ${resposta.status}`);
+          }
+
+          return interpretarRespostaAppsScript(texto);
+        } catch (erro) {
+          // Alguns navegadores/celulares bloqueiam POST para Apps Script por CORS.
+          // A tentativa por JSONP funciona se o Apps Script também aceitar ações via doGet com callback.
+          return chamarAppsScriptJsonp(parametros, erro);
+        }
+      }
+
+      try {
+        const url = new URL(GOOGLE_SCRIPT_URL);
+        url.searchParams.set("acao", acao);
+        url.searchParams.set("_", Date.now().toString());
+
+        Object.entries(parametros).forEach(([chave, valor]) => {
+          if (valor !== undefined && valor !== null) {
+            url.searchParams.set(chave, String(valor));
+          }
+        });
+
+        const resposta = await fetch(url.toString(), {
+          method: "GET",
+          cache: "no-store",
+          redirect: "follow"
+        });
+
+        const texto = await resposta.text();
+
+        if (!resposta.ok) {
+          throw new Error(`Erro HTTP ${resposta.status}`);
+        }
+
+        return interpretarRespostaAppsScript(texto);
+      } catch (erro) {
+        return chamarAppsScriptJsonp(parametros, erro);
+      }
+    }
+
+    function chamarAppsScriptJsonp(parametros = {}, erroAnterior = null) {
+      return new Promise((resolve, reject) => {
+        const callbackName = "bingoCasaDaLu_" + Date.now() + "_" + Math.random().toString(36).slice(2);
+        const url = new URL(GOOGLE_SCRIPT_URL);
+
+        Object.entries(parametros).forEach(([chave, valor]) => {
+          if (valor !== undefined && valor !== null) {
+            url.searchParams.set(chave, String(valor));
+          }
+        });
+
+        url.searchParams.set("callback", callbackName);
+        url.searchParams.set("_", Date.now().toString());
+
+        const script = document.createElement("script");
+        const timeout = setTimeout(() => {
+          limpar();
+          const detalhe = erroAnterior && erroAnterior.message ? ` Detalhe: ${erroAnterior.message}` : "";
+          reject(new Error("Não foi possível conectar ao Google Sheets agora." + detalhe));
+        }, 12000);
+
+        function limpar() {
+          clearTimeout(timeout);
+          delete window[callbackName];
+          script.remove();
+        }
+
+        window[callbackName] = (resposta) => {
+          limpar();
+          if (!resposta || resposta.ok === false) {
+            reject(new Error(resposta && (resposta.erro || resposta.mensagem) ? (resposta.erro || resposta.mensagem) : "Resposta inválida do Google Sheets."));
+            return;
+          }
+          resolve(resposta);
+        };
+
+        script.onerror = () => {
+          limpar();
+          const detalhe = erroAnterior && erroAnterior.message ? ` Detalhe: ${erroAnterior.message}` : "";
+          reject(new Error("Falha ao carregar resposta do Google Sheets." + detalhe));
+        };
+
+        script.src = url.toString();
+        document.body.appendChild(script);
+      });
+    }
+
+    function normalizarNumeros(lista) {
+      if (!Array.isArray(lista)) return [];
+      const unicos = new Set();
+
+      lista.forEach(valor => {
+        const numero = Number(valor);
+        if (Number.isInteger(numero) && numero >= 1 && numero <= 75) {
+          unicos.add(numero);
+        }
+      });
+
+      return Array.from(unicos);
+    }
+
+    function aplicarNumerosSorteados(lista) {
+      numerosSorteados = normalizarNumeros(lista);
+      const ultimo = numerosSorteados[numerosSorteados.length - 1];
+
+      const ultimoFormatado = ultimo ? String(ultimo).padStart(2, "0") : "--";
+      numeroAtual.textContent = ultimoFormatado;
+      if (numeroAtualCartela) numeroAtualCartela.textContent = ultimoFormatado;
+
+      document.querySelectorAll("td[data-numero]").forEach(td => {
+        td.classList.toggle("cantado", numerosSorteados.includes(Number(td.dataset.numero)));
+      });
+
+      atualizarStatus();
+    }
+
+    function carregarNumerosLocais() {
+      try {
+        const salvos = JSON.parse(localStorage.getItem(CHAVE_LOCAL_STORAGE) || "[]");
+        return normalizarNumeros(salvos);
+      } catch {
+        return [];
+      }
+    }
+
+    function salvarNumerosLocais() {
+      localStorage.setItem(CHAVE_LOCAL_STORAGE, JSON.stringify(numerosSorteados));
+    }
+
+    function montarPayloadReservaCartela(perfil, forcarNova = false, cartelaAnteriorId = "") {
+      return {
+        acao: "reservarCartela",
+        dispositivo_id: obterOuCriarDispositivoId(),
+        data_nascimento: perfil.data,
+        base: perfil.base,
+        cartela_preferida: perfil.cartelaId,
+        cartela_anterior: cartelaAnteriorId || "",
+        forcar_nova: forcarNova ? "sim" : "nao",
+        cartelas: CARTELAS.map(cartela => cartela.id).join(",")
+      };
+    }
+
+    async function reservarCartelaNoGoogleSheets(perfilSugerido, forcarNova = false, cartelaAnteriorId = "") {
+      if (!googleSheetsConfigurado()) return perfilSugerido;
+
+      const resposta = await chamarAppsScript(
+        montarPayloadReservaCartela(perfilSugerido, forcarNova, cartelaAnteriorId),
+        "POST"
+      );
+
+      const cartelaReservadaId = resposta.cartela_id || resposta.cartelaId;
+      const indiceReservado = encontrarIndiceCartelaPorId(cartelaReservadaId);
+
+      if (indiceReservado < 0) {
+        throw new Error("O Google Sheets devolveu uma cartela que não existe neste HTML.");
+      }
+
+      const deslocamentoCalculado = ((indiceReservado - perfilSugerido.inicioIndice) % CARTELAS.length + CARTELAS.length) % CARTELAS.length;
+
+      return {
+        ...perfilSugerido,
+        indice: indiceReservado,
+        cartelaId: cartelaReservadaId,
+        deslocamentoCartela: deslocamentoCalculado,
+        reservadaNoSheets: true,
+        partidaId: resposta.partida_id || "",
+        dispositivoId: resposta.dispositivo_id || obterOuCriarDispositivoId()
+      };
+    }
+
+    async function conferirReservaDaPartida(estado) {
+      if (!googleSheetsConfigurado()) return;
+
+      const partidaId = estado && estado.partida_id ? String(estado.partida_id) : "";
+      const perfil = carregarPerfilCartela();
+
+      if (!partidaId || !perfil) return;
+      if (perfil.partidaId === partidaId && perfil.reservadaNoSheets) return;
+
+      try {
+        definirStatus("Conferindo reserva da sua cartela nesta rodada...", "warn");
+        const perfilReservado = await reservarCartelaNoGoogleSheets(perfil, false);
+        salvarPerfilCartela(perfilReservado);
+        aplicarPerfilCartela(perfilReservado);
+      } catch (erro) {
+        definirStatus(`Não consegui reservar sua cartela nesta rodada: ${erro.message}`, "erro");
+        renderizarCartelaBloqueada();
+      }
+    }
+
+    async function carregarSorteadosDoBanco(mostrarMensagem = true) {
+      if (googleSheetsConfigurado()) {
+        try {
+          const dados = await chamarAppsScript({ acao: "listar" }, "GET");
+          const estado = extrairEstadoDaResposta(dados);
+          const mudouPartida = detectarELimparSeMudouPartida(estado);
+
+          await conferirReservaDaPartida(estado);
+          aplicarNumerosSorteados(extrairNumerosDaResposta(dados));
+
+          if (mudouPartida) {
+            definirStatus("Nova partida detectada. Sua cartela foi limpa automaticamente.", "ok");
+          } else if (mostrarMensagem) {
+            definirStatus("Números atualizados.", "ok");
+          } else if (!statusConexao.classList.contains("erro")) {
+            definirStatus("");
+          }
+
+          return true;
+        } catch (erro) {
+          definirStatus(`Não consegui atualizar pelo Google Sheets: ${erro.message}. Aguarde a atualização automática ou abra o menu novamente para tentar atualizar.`, "erro");
+          return false;
+        }
+      }
+
+      aplicarNumerosSorteados(carregarNumerosLocais());
+      if (mostrarMensagem) {
+        definirStatus("Modo local/teste ativo. Neste modo, só este aparelho vê os sorteados.", "warn");
+      }
+      return true;
+    }
+
+    function atualizarSorteadosSilenciosamente() {
+      if (!document.hidden) {
+        carregarSorteadosDoBanco(false);
+      }
+    }
+
+    function iniciarAtualizacaoAutomatica() {
+      if (atualizacaoTimer) clearInterval(atualizacaoTimer);
+      atualizarSorteadosSilenciosamente();
+      atualizacaoTimer = setInterval(atualizarSorteadosSilenciosamente, AUTO_ATUALIZAR_MS);
+    }
+
+    function formatarDataNascimento(valor) {
+      const apenasNumeros = String(valor || "").replace(/\D/g, "").slice(0, 8);
+      const partes = [];
+
+      if (apenasNumeros.length > 0) partes.push(apenasNumeros.slice(0, 2));
+      if (apenasNumeros.length > 2) partes.push(apenasNumeros.slice(2, 4));
+      if (apenasNumeros.length > 4) partes.push(apenasNumeros.slice(4, 8));
+
+      return partes.filter(Boolean).join("/");
+    }
+
+    function interpretarDataNascimento(valor, deslocamentoCartela = 0) {
+      const match = String(valor || "").trim().match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+      if (!match) {
+        throw new Error("Digite a data no formato 05/10/1988.");
+      }
+
+      const dia = Number(match[1]);
+      const mes = Number(match[2]);
+      const ano = Number(match[3]);
+
+      const data = new Date(ano, mes - 1, dia);
+      const dataValida =
+        data.getFullYear() === ano &&
+        data.getMonth() === mes - 1 &&
+        data.getDate() === dia;
+
+      if (!dataValida) {
+        throw new Error("Essa data não parece válida. Confira o dia, mês e ano.");
+      }
+
+      const anoAtual = new Date().getFullYear();
+      if (ano < 1900 || ano > anoAtual) {
+        throw new Error("Confira o ano de nascimento.");
+      }
+
+      const base = dia + mes + ano;
+      const inicioIndice = ((base - 1) % CARTELAS.length + CARTELAS.length) % CARTELAS.length;
+      const deslocamentoSeguro = ((Number(deslocamentoCartela) || 0) % CARTELAS.length + CARTELAS.length) % CARTELAS.length;
+      const indice = (inicioIndice + deslocamentoSeguro) % CARTELAS.length;
+      const cartela = CARTELAS[indice];
+
+      return {
+        data: `${String(dia).padStart(2, "0")}/${String(mes).padStart(2, "0")}/${ano}`,
+        dia,
+        mes,
+        ano,
+        base,
+        inicioIndice,
+        deslocamentoCartela: deslocamentoSeguro,
+        indice,
+        cartelaId: cartela.id
+      };
+    }
+
+    function salvarPerfilCartela(perfil) {
+      localStorage.setItem(CHAVE_CARTELA_USUARIO, JSON.stringify(perfil));
+
+      if (perfil && perfil.partidaId) {
+        localStorage.setItem(CHAVE_PARTIDA_ATUAL, String(perfil.partidaId));
+      }
+    }
+
+    function carregarPerfilCartela() {
+      try {
+        const salvo = JSON.parse(localStorage.getItem(CHAVE_CARTELA_USUARIO) || "null");
+        if (!salvo || !salvo.data) return null;
+
+        const perfil = interpretarDataNascimento(salvo.data, salvo.deslocamentoCartela || 0);
+        const indiceSalvo = encontrarIndiceCartelaPorId(salvo.cartelaId || salvo.cartela_id);
+
+        if (indiceSalvo >= 0) {
+          perfil.indice = indiceSalvo;
+          perfil.cartelaId = CARTELAS[indiceSalvo].id;
+          perfil.deslocamentoCartela = ((indiceSalvo - perfil.inicioIndice) % CARTELAS.length + CARTELAS.length) % CARTELAS.length;
+        }
+
+        perfil.reservadaNoSheets = Boolean(salvo.reservadaNoSheets);
+        perfil.partidaId = salvo.partidaId || "";
+        perfil.dispositivoId = salvo.dispositivoId || obterOuCriarDispositivoId();
+
+        return perfil;
+      } catch (erro) {
+        localStorage.removeItem(CHAVE_CARTELA_USUARIO);
+        return null;
+      }
+    }
+
+    function aplicarPerfilCartela(perfil) {
+      cartelaAtual = CARTELAS[perfil.indice];
+      bingoCelebrado = false;
+      renderizarCartela();
+      atualizarStatus();
+      statusNascimento.textContent = `${perfil.base} → ${perfil.cartelaId}`;
+      definirStatus(
+        `Cartela ${perfil.cartelaId} carregada pela sua data. Você não precisará informar de novo neste celular.`,
+        googleSheetsConfigurado() ? "ok" : "warn"
+      );
+    }
+
+    function renderizarCartelaBloqueada() {
+      cartelaAtual = null;
+      corpoCartela.innerHTML = '<tr><td class="cartela-bloqueada" colspan="5">Clique em “Bora jogar, sô!” e informe sua data de nascimento para liberar sua cartela.</td></tr>';
+      cartelaId.textContent = "Cartela aguardando data";
+      statusCartela.textContent = "Informe a data";
+      statusNascimento.textContent = "—";
+    }
+
+    function escolherCartelaAleatoria() {
+      // Mantida apenas como reserva técnica para teste local. O fluxo oficial usa a data de nascimento.
+      const indice = inteiroAleatorioSeguro(CARTELAS.length);
+      cartelaAtual = CARTELAS[indice];
+      bingoCelebrado = false;
+      renderizarCartela();
+      atualizarStatus();
+      statusNascimento.textContent = "aleatória";
+      tocarToque("toque");
+    }
+
+    async function pedirDataNascimento() {
+      if (pedidoDataPromise) return pedidoDataPromise;
+
+      dataNascimentoInput.value = "";
+      dataNascimentoErro.textContent = "";
+
+      const promessa = new Promise(resolve => {
+        pedidoDataResolve = resolve;
+
+        if (typeof dataNascimentoDialog.showModal === "function") {
+          if (!dataNascimentoDialog.open) {
+            dataNascimentoDialog.showModal();
+          }
+          setTimeout(() => dataNascimentoInput.focus(), 60);
+        } else {
+          const valor = prompt("Digite sua data de nascimento. Exemplo: 05/10/1988");
+          if (!valor) {
+            resolve(null);
+            return;
+          }
+
+          try {
+            const perfil = interpretarDataNascimento(valor);
+            resolve(perfil);
+          } catch (erro) {
+            alert(erro.message);
+            resolve(null);
+          }
+        }
+      });
+
+      pedidoDataPromise = promessa.finally(() => {
+        pedidoDataPromise = null;
+      });
+
+      return pedidoDataPromise;
+    }
+
+    function fecharDataNascimentoDialog(perfil = null) {
+      if (typeof dataNascimentoDialog.close === "function" && dataNascimentoDialog.open) {
+        dataNascimentoDialog.close();
+      }
+
+      if (pedidoDataResolve) {
+        const resolver = pedidoDataResolve;
+        pedidoDataResolve = null;
+        resolver(perfil);
+      }
+    }
+
+    async function garantirCartelaDoUsuario(forcarNovaData = false) {
+      if (!forcarNovaData && garantiaCartelaEmAndamento) {
+        return garantiaCartelaEmAndamento;
+      }
+
+      const executarGarantia = async () => {
+        let perfil = forcarNovaData ? null : carregarPerfilCartela();
+        const cartelaAnteriorId = cartelaAtual && cartelaAtual.id ? cartelaAtual.id : (perfil && perfil.cartelaId ? perfil.cartelaId : "");
+
+        if (!perfil) {
+          perfil = await pedirDataNascimento();
+        }
+
+        if (!perfil) {
+          const perfilExistente = carregarPerfilCartela();
+
+          if (perfilExistente) {
+            aplicarPerfilCartela(perfilExistente);
+          } else {
+            renderizarCartelaBloqueada();
+          }
+
+          return null;
+        }
+
+        if (googleSheetsConfigurado()) {
+          try {
+            definirStatus("Reservando cartela livre no Google Sheets...", "warn");
+            perfil = await reservarCartelaNoGoogleSheets(perfil, forcarNovaData, cartelaAnteriorId);
+          } catch (erro) {
+            definirStatus(`Não consegui reservar cartela livre: ${erro.message}`, "erro");
+            renderizarCartelaBloqueada();
+            return null;
+          }
+        }
+
+        salvarPerfilCartela(perfil);
+        aplicarPerfilCartela(perfil);
+        return perfil;
+      };
+
+      const promessa = executarGarantia();
+
+      if (!forcarNovaData) {
+        garantiaCartelaEmAndamento = promessa;
+      }
+
+      try {
+        return await promessa;
+      } finally {
+        if (!forcarNovaData && garantiaCartelaEmAndamento === promessa) {
+          garantiaCartelaEmAndamento = null;
+        }
+      }
+    }
+
+    async function corrigirDataNascimento() {
+      iniciarAudio();
+
+      const cartelaAnteriorId = cartelaAtual && cartelaAtual.id ? cartelaAtual.id : null;
+      const perfil = await garantirCartelaDoUsuario(true);
+
+      if (perfil) {
+        if (cartelaAnteriorId) limparMarcacoesCartela(cartelaAnteriorId);
+        limparMarcacoesCartela(perfil.cartelaId);
+        aplicarPerfilCartela(perfil);
+        aplicarNumerosSorteados(numerosSorteados);
+        tocarToque("toque");
+      }
+    }
+
+
+
+    function carregarTodasMarcacoes() {
+      try {
+        const salvas = JSON.parse(localStorage.getItem(CHAVE_MARCACOES_CARTELA) || "{}");
+        return salvas && typeof salvas === "object" && !Array.isArray(salvas) ? salvas : {};
+      } catch {
+        localStorage.removeItem(CHAVE_MARCACOES_CARTELA);
+        return {};
+      }
+    }
+
+    function salvarTodasMarcacoes(mapa) {
+      const limpo = {};
+
+      Object.entries(mapa || {}).forEach(([cartelaId, lista]) => {
+        const numeros = normalizarNumeros(lista);
+        if (cartelaId && numeros.length) {
+          limpo[cartelaId] = numeros;
+        }
+      });
+
+      if (Object.keys(limpo).length) {
+        localStorage.setItem(CHAVE_MARCACOES_CARTELA, JSON.stringify(limpo));
+      } else {
+        localStorage.removeItem(CHAVE_MARCACOES_CARTELA);
+      }
+
+      return limpo;
+    }
+
+    function carregarMarcacoesCartela(cartelaId = cartelaAtual && cartelaAtual.id) {
+      if (!cartelaId) return [];
+      const mapa = carregarTodasMarcacoes();
+      return normalizarNumeros(mapa[cartelaId] || []);
+    }
+
+    function salvarMarcacoesCartela(cartelaId, numeros) {
+      if (!cartelaId) return;
+      const mapa = carregarTodasMarcacoes();
+      mapa[cartelaId] = normalizarNumeros(numeros);
+      salvarTodasMarcacoes(mapa);
+    }
+
+    function salvarMarcacoesDaTela() {
+      if (!cartelaAtual) return;
+
+      const marcados = Array.from(document.querySelectorAll('td.marcado[data-numero]'))
+        .map(td => Number(td.dataset.numero))
+        .filter(numero => Number.isInteger(numero) && numero >= 1 && numero <= 75);
+
+      salvarMarcacoesCartela(cartelaAtual.id, marcados);
+    }
+
+    function limparMarcacoesCartela(cartelaId) {
+      if (!cartelaId) return;
+
+      const mapa = carregarTodasMarcacoes();
+      delete mapa[cartelaId];
+      salvarTodasMarcacoes(mapa);
+    }
+
+
+    function limparTodasMarcacoesDaRodada() {
+      localStorage.removeItem(CHAVE_MARCACOES_CARTELA);
+      localStorage.removeItem(CHAVE_LOCAL_STORAGE);
+      bingoCelebrado = false;
+
+      document.querySelectorAll("td.marcado[data-numero]").forEach(td => {
+        td.classList.remove("marcado");
+      });
+
+      if (bingoDialog && bingoDialog.open && typeof bingoDialog.close === "function") {
+        bingoDialog.close();
+      }
+    }
+
+    function detectarELimparSeMudouPartida(estado) {
+      const novaPartidaId = estado && estado.partida_id ? String(estado.partida_id) : "";
+      if (!novaPartidaId) return false;
+
+      const perfilSalvo = carregarPerfilCartela();
+      const partidaSalva = localStorage.getItem(CHAVE_PARTIDA_ATUAL) || (perfilSalvo && perfilSalvo.partidaId ? String(perfilSalvo.partidaId) : "");
+      const mudouPartida = Boolean(partidaSalva && partidaSalva !== novaPartidaId);
+
+      if (mudouPartida) {
+        limparTodasMarcacoesDaRodada();
+      }
+
+      localStorage.setItem(CHAVE_PARTIDA_ATUAL, novaPartidaId);
+      return mudouPartida;
+    }
+
+
+    function carregarMensagensUsadas() {
+      try {
+        const salvas = JSON.parse(localStorage.getItem(CHAVE_MENSAGENS_USADAS) || "[]");
+        if (!Array.isArray(salvas)) return [];
+
+        return Array.from(new Set(
+          salvas
+            .map(indice => Number(indice))
+            .filter(indice => Number.isInteger(indice) && indice >= 0 && indice < MENSAGENS_ENGRACADAS.length)
+        ));
+      } catch {
+        localStorage.removeItem(CHAVE_MENSAGENS_USADAS);
+        return [];
+      }
+    }
+
+    function salvarMensagensUsadas(usadas) {
+      localStorage.setItem(CHAVE_MENSAGENS_USADAS, JSON.stringify(usadas));
+    }
+
+    function mensagemPrioritariaInicialConcluida() {
+      return localStorage.getItem(CHAVE_MENSAGENS_PRIORITARIAS_OK) === "sim";
+    }
+
+    function marcarMensagemPrioritariaInicialConcluida() {
+      localStorage.setItem(CHAVE_MENSAGENS_PRIORITARIAS_OK, "sim");
+    }
+
+    function registrarMensagemUsada(indice, usadas) {
+      const novasUsadas = Array.from(new Set([...usadas, indice]));
+      salvarMensagensUsadas(novasUsadas);
+
+      if (
+        !mensagemPrioritariaInicialConcluida() &&
+        MENSAGENS_PRIORITARIAS_INICIAIS.every(indicePrioritario => novasUsadas.includes(indicePrioritario))
+      ) {
+        marcarMensagemPrioritariaInicialConcluida();
+      }
+
+      return MENSAGENS_ENGRACADAS[indice];
+    }
+
+    function escolherMensagemEngracadaSemRepetir() {
+      if (!MENSAGENS_ENGRACADAS.length) return "";
+
+      let usadas = carregarMensagensUsadas();
+
+      // Na primeira vez usando o site, estas duas mensagens aparecem em primeiro e segundo lugar.
+      // Se a pessoa der refresh entre uma e outra, o localStorage mantém a ordem certinha.
+      if (!mensagemPrioritariaInicialConcluida()) {
+        for (const indicePrioritario of MENSAGENS_PRIORITARIAS_INICIAIS) {
+          if (!usadas.includes(indicePrioritario)) {
+            return registrarMensagemUsada(indicePrioritario, usadas);
+          }
+        }
+
+        marcarMensagemPrioritariaInicialConcluida();
+      }
+
+      if (usadas.length >= MENSAGENS_ENGRACADAS.length) {
+        usadas = [];
+        salvarMensagensUsadas(usadas);
+      }
+
+      const usadasSet = new Set(usadas);
+      const disponiveis = MENSAGENS_ENGRACADAS
+        .map((_, indice) => indice)
+        .filter(indice => !usadasSet.has(indice));
+
+      const indiceEscolhido = disponiveis[Math.floor(Math.random() * disponiveis.length)];
+      return registrarMensagemUsada(indiceEscolhido, usadas);
+    }
+
+    function mostrarMensagemEngracada() {
+      if (!mensagemEngracada || !MENSAGENS_ENGRACADAS.length) return;
+
+      const mensagem = escolherMensagemEngracadaSemRepetir();
+      mensagemEngracada.textContent = mensagem;
+      mensagemEngracada.classList.remove("visivel");
+
+      window.requestAnimationFrame(() => {
+        mensagemEngracada.classList.add("visivel");
+      });
+
+      const tempoMensagem = MENSAGENS_PRIORITARIAS_INICIAIS
+        .some(indicePrioritario => MENSAGENS_ENGRACADAS[indicePrioritario] === mensagem)
+        ? 7000
+        : 5000;
+
+      window.clearTimeout(mensagemEngracadaTimer);
+      mensagemEngracadaTimer = window.setTimeout(() => {
+        mensagemEngracada.classList.remove("visivel");
+      }, tempoMensagem);
+    }
+
+    function renderizarCartela() {
+      corpoCartela.innerHTML = "";
+
+      if (!cartelaAtual) {
+        renderizarCartelaBloqueada();
+        return;
+      }
+
+      const marcacoesSalvas = new Set(carregarMarcacoesCartela(cartelaAtual.id));
+
+      cartelaAtual.grid.forEach((linha, linhaIndex) => {
+        const tr = document.createElement("tr");
+
+        linha.forEach((valor, colunaIndex) => {
+          const td = document.createElement("td");
+          td.textContent = valor;
+          td.dataset.linha = linhaIndex;
+          td.dataset.coluna = colunaIndex;
+
+          if (valor === "★") {
+            td.classList.add("livre", "marcado");
+            td.setAttribute("aria-label", "Espaço livre");
+          } else {
+            td.dataset.numero = valor;
+            const numeroCelula = Number(valor);
+            if (numerosSorteados.includes(numeroCelula)) {
+              td.classList.add("cantado");
+            }
+            if (marcacoesSalvas.has(numeroCelula)) {
+              td.classList.add("marcado");
+            }
+            td.addEventListener("click", () => {
+              iniciarAudio();
+
+              const estavaMarcado = td.classList.contains("marcado");
+              td.classList.toggle("marcado");
+              salvarMarcacoesDaTela();
+
+              // Só mostra a mensagem quando a pessoa MARCA o número.
+              // Se ela clicou de novo para desfazer uma marcação errada, não aparece mensagem.
+              if (!estavaMarcado) {
+                mostrarMensagemEngracada();
+                tocarToque("toque");
+              }
+
+              verificarBingo();
+            });
+          }
+
+          tr.appendChild(td);
+        });
+
+        corpoCartela.appendChild(tr);
+      });
+
+      cartelaId.textContent = `Cartela ${cartelaAtual.id}`;
+      statusCartela.textContent = cartelaAtual.id;
+    }
+
+    function atualizarStatus() {
+      statusSorteados.textContent = `${numerosSorteados.length} / 75`;
+
+      [listaSorteados, listaSorteadosMenu].filter(Boolean).forEach(lista => {
+        lista.innerHTML = "";
+
+        numerosSorteados.forEach(numero => {
+          const item = document.createElement("span");
+          item.className = "numero-sorteado";
+          item.textContent = String(numero).padStart(2, "0");
+          lista.appendChild(item);
+        });
+      });
+    }
+
+    function escolherNumeroDisponivel() {
+      const disponiveis = [];
+      for (let numero = 1; numero <= 75; numero++) {
+        if (!numerosSorteados.includes(numero)) {
+          disponiveis.push(numero);
+        }
+      }
+
+      if (!disponiveis.length) return null;
+      return disponiveis[inteiroAleatorioSeguro(disponiveis.length)];
+    }
+
+    function pedirSenha(titulo = "Senha para sortear", descricao = "Digite a senha de administradora para cantar o próximo número.", rotuloBotao = "Liberar") {
+      senhaInput.value = "";
+      senhaErro.textContent = "";
+      senhaTitulo.textContent = titulo;
+      senhaDescricao.textContent = descricao;
+      senhaConfirmar.textContent = rotuloBotao;
+
+      return new Promise(resolve => {
+        pedidoSenhaResolve = resolve;
+        if (typeof senhaDialog.showModal === "function") {
+          senhaDialog.showModal();
+          setTimeout(() => senhaInput.focus(), 60);
+        } else {
+          const senha = prompt(titulo);
+          resolve(senha || "");
+        }
+      });
+    }
+
+    function fecharSenhaDialog(valor = "") {
+      if (typeof senhaDialog.close === "function" && senhaDialog.open) {
+        senhaDialog.close();
+      }
+
+      if (pedidoSenhaResolve) {
+        pedidoSenhaResolve(valor);
+        pedidoSenhaResolve = null;
+      }
+    }
+
+    function atualizarModoAdministrador() {
+      const ehAdmin = Boolean(senhaAdministradoraSessao);
+
+      if (btnSortearRapido) {
+        btnSortearRapido.classList.toggle("hidden", !ehAdmin);
+        btnSortearRapido.classList.toggle("carregando", sorteioEmAndamento);
+        btnSortearRapido.disabled = sorteioEmAndamento || !ehAdmin;
+        btnSortearRapido.textContent = sorteioEmAndamento ? "🎲 Sorteando..." : "🎲 Sortear";
+      }
+
+      if (btnSortearMenu) {
+        btnSortearMenu.classList.toggle("carregando", sorteioEmAndamento);
+        btnSortearMenu.disabled = sorteioEmAndamento;
+        btnSortearMenu.textContent = ehAdmin
+          ? (sorteioEmAndamento ? "Sorteando..." : "Sortear próximo número")
+          : "Sortear número com senha";
+      }
+    }
+
+    async function obterSenhaAdministradora(titulo, descricao, rotuloBotao) {
+      if (senhaAdministradoraSessao) {
+        return senhaAdministradoraSessao;
+      }
+
+      return await pedirSenha(titulo, descricao, rotuloBotao);
+    }
+
+    function salvarSenhaAdministradoraSessao(senha) {
+      senhaAdministradoraSessao = senha || "";
+      atualizarModoAdministrador();
+    }
+
+    function limparSenhaAdministradoraSessao() {
+      senhaAdministradoraSessao = "";
+      atualizarModoAdministrador();
+    }
+
+    function erroPareceSenha(erro) {
+      return String(erro && erro.message ? erro.message : erro || "").toLowerCase().includes("senha");
+    }
+
+    async function sortearNumero() {
+      if (sorteioEmAndamento) return;
+
+      sorteioEmAndamento = true;
+      atualizarModoAdministrador();
+
+      try {
+        iniciarAudio();
+
+        const senha = await obterSenhaAdministradora(
+          "Senha para sortear",
+          "Digite a senha de administradora para cantar o próximo número.",
+          "Liberar sorteio"
+        );
+
+        if (!senha) return;
+
+        if (!googleSheetsConfigurado() && senha !== SENHA_LOCAL_TESTE) {
+          limparSenhaAdministradoraSessao();
+          definirStatus("Senha incorreta. O número não foi sorteado.", "erro");
+          tocarToque("toque");
+          return;
+        }
+
+        if (numerosSorteados.length >= 75) {
+          numeroAtual.textContent = "Fim";
+          definirStatus("Todos os 75 números já foram sorteados.", "warn");
+          return;
+        }
+
+        try {
+          if (googleSheetsConfigurado()) {
+            definirStatus("Conferindo senha e salvando o sorteio no Google Sheets...", "warn");
+
+            const dados = await chamarAppsScript({
+              acao: "sortear",
+              senha
+            }, "POST");
+
+            salvarSenhaAdministradoraSessao(senha);
+            const numeros = extrairNumerosDaResposta(dados);
+            aplicarNumerosSorteados(numeros);
+
+            const numero = dados.numero_sorteado || (numeros.length ? numeros[numeros.length - 1] : null);
+            if (numero) {
+              numeroAtual.textContent = String(numero).padStart(2, "0");
+            }
+
+            definirStatus("Número sorteado.", "ok");
+          } else {
+            const numero = escolherNumeroDisponivel();
+
+            if (!numero) {
+              numeroAtual.textContent = "Fim";
+              definirStatus("Todos os 75 números já foram sorteados.", "warn");
+              return;
+            }
+
+            salvarSenhaAdministradoraSessao(senha);
+            numerosSorteados.push(numero);
+            salvarNumerosLocais();
+            aplicarNumerosSorteados(numerosSorteados);
+            definirStatus("Número sorteado.", "ok");
+          }
+
+          tocarToque("toque");
+        } catch (erro) {
+          if (erroPareceSenha(erro)) limparSenhaAdministradoraSessao();
+          definirStatus(`Erro no sorteio: ${erro.message}`, "erro");
+        }
+      } finally {
+        sorteioEmAndamento = false;
+        atualizarModoAdministrador();
+      }
+    }
+
+    async function trocarCartelaAleatoria() {
+      iniciarAudio();
+
+      let perfilExistente = carregarPerfilCartela();
+
+      if (!perfilExistente) {
+        // Primeiro acesso: pede a data uma única vez e salva no localStorage.
+        perfilExistente = await garantirCartelaDoUsuario(false);
+        return;
+      }
+
+      const confirmado = confirm("Tem certeza que deseja abrir uma nova cartela neste celular? As marcações da cartela atual serão apagadas. A data de nascimento já salva será mantida.");
+      if (!confirmado) return;
+
+      const cartelaAnteriorId = cartelaAtual && cartelaAtual.id ? cartelaAtual.id : perfilExistente.cartelaId;
+      const proximoDeslocamento = (perfilExistente.deslocamentoCartela + 1) % CARTELAS.length;
+      let novoPerfil = interpretarDataNascimento(perfilExistente.data, proximoDeslocamento);
+
+      if (googleSheetsConfigurado()) {
+        try {
+          definirStatus("Trocando por outra cartela livre no Google Sheets...", "warn");
+          novoPerfil = await reservarCartelaNoGoogleSheets(novoPerfil, true, cartelaAnteriorId);
+        } catch (erro) {
+          definirStatus(`Não consegui trocar a cartela: ${erro.message}`, "erro");
+          return;
+        }
+      }
+
+      if (cartelaAnteriorId) limparMarcacoesCartela(cartelaAnteriorId);
+      limparMarcacoesCartela(novoPerfil.cartelaId);
+      salvarPerfilCartela(novoPerfil);
+      aplicarPerfilCartela(novoPerfil);
+      aplicarNumerosSorteados(numerosSorteados);
+      tocarToque("toque");
+    }
+
+    async function novaPartida() {
+      iniciarAudio();
+
+      const senha = await obterSenhaAdministradora(
+        "Senha para nova partida",
+        "Digite a senha de administradora para limpar os números sorteados e começar outra partida.",
+        "Começar nova partida"
+      );
+
+      if (!senha) return;
+
+      if (!googleSheetsConfigurado() && senha !== SENHA_LOCAL_TESTE) {
+        limparSenhaAdministradoraSessao();
+        definirStatus("Senha incorreta. A partida não foi reiniciada.", "erro");
+        tocarToque("toque");
+        return;
+      }
+
+      try {
+        if (googleSheetsConfigurado()) {
+          definirStatus("Criando nova partida e limpando os números no Google Sheets...", "warn");
+
+          const dados = await chamarAppsScript({
+            acao: "novaPartida",
+            senha
+          }, "POST");
+
+          salvarSenhaAdministradoraSessao(senha);
+          const estadoNovaPartida = extrairEstadoDaResposta(dados);
+          detectarELimparSeMudouPartida(estadoNovaPartida);
+          aplicarNumerosSorteados(extrairNumerosDaResposta(dados));
+          localStorage.removeItem(CHAVE_LOCAL_STORAGE);
+          localStorage.removeItem(CHAVE_MARCACOES_CARTELA);
+          bingoCelebrado = false;
+          const perfil = await garantirCartelaDoUsuario(false);
+          if (perfil) aplicarPerfilCartela(perfil);
+          else renderizarCartelaBloqueada();
+
+          definirStatus("Nova partida iniciada.", "ok");
+        } else {
+          salvarSenhaAdministradoraSessao(senha);
+          numerosSorteados = [];
+          bingoCelebrado = false;
+          numeroAtual.textContent = "--";
+          listaSorteados.innerHTML = "";
+          localStorage.removeItem(CHAVE_LOCAL_STORAGE);
+          localStorage.removeItem(CHAVE_MARCACOES_CARTELA);
+          const perfil = carregarPerfilCartela();
+          if (perfil) aplicarPerfilCartela(perfil);
+          else renderizarCartelaBloqueada();
+          atualizarStatus();
+          definirStatus("Nova partida iniciada no modo local/teste.", "warn");
+        }
+
+        tocarToque("bingo");
+      } catch (erro) {
+        if (erroPareceSenha(erro)) limparSenhaAdministradoraSessao();
+        definirStatus(`Erro ao iniciar nova partida: ${erro.message}`, "erro");
+      }
+    }
+
+
+    function carregarPremiosEscolhidos() {
+      try {
+        const salvos = JSON.parse(localStorage.getItem(CHAVE_PREMIOS_ESCOLHIDOS) || "[]");
+        if (!Array.isArray(salvos)) return [];
+        return Array.from(new Set(
+          salvos
+            .map(numero => Number(numero))
+            .filter(numero => Number.isInteger(numero) && numero >= 1 && numero <= TOTAL_PREMIOS_SECRETOS)
+        )).sort((a, b) => a - b);
+      } catch {
+        return [];
+      }
+    }
+
+    function salvarPremiosEscolhidos(lista) {
+      const normalizados = Array.from(new Set(
+        (Array.isArray(lista) ? lista : [])
+          .map(numero => Number(numero))
+          .filter(numero => Number.isInteger(numero) && numero >= 1 && numero <= TOTAL_PREMIOS_SECRETOS)
+      )).sort((a, b) => a - b);
+
+      localStorage.setItem(CHAVE_PREMIOS_ESCOLHIDOS, JSON.stringify(normalizados));
+      return normalizados;
+    }
+
+    function carregarPosicoesPremios600() {
+      try {
+        const salvas = JSON.parse(localStorage.getItem(CHAVE_PREMIOS_POSICOES_600) || "[]");
+        if (!Array.isArray(salvas)) return [];
+        return Array.from(new Set(
+          salvas
+            .map(numero => Number(numero))
+            .filter(numero => Number.isInteger(numero) && numero >= 1 && numero <= TOTAL_POSICOES_PREMIOS_SEGUNDA_VEZ)
+        )).sort((a, b) => a - b);
+      } catch {
+        return [];
+      }
+    }
+
+    function salvarPosicoesPremios600(lista) {
+      const normalizadas = Array.from(new Set(
+        (Array.isArray(lista) ? lista : [])
+          .map(numero => Number(numero))
+          .filter(numero => Number.isInteger(numero) && numero >= 1 && numero <= TOTAL_POSICOES_PREMIOS_SEGUNDA_VEZ)
+      )).sort((a, b) => a - b);
+
+      localStorage.setItem(CHAVE_PREMIOS_POSICOES_600, JSON.stringify(normalizadas));
+      return normalizadas;
+    }
+
+    function carregarModoPremios() {
+      const modoSalvo = localStorage.getItem(CHAVE_PREMIOS_MODO);
+      return modoSalvo === "segunda" ? "segunda" : "primeira";
+    }
+
+    function salvarModoPremios(modo) {
+      const modoNormalizado = modo === "segunda" ? "segunda" : "primeira";
+      localStorage.setItem(CHAVE_PREMIOS_MODO, modoNormalizado);
+      return modoNormalizado;
+    }
+
+    function formatarPremio(numero) {
+      return String(numero).padStart(2, "0");
+    }
+
+    function formatarPosicao600(numero) {
+      const valor = Number(numero);
+      if (!Number.isFinite(valor)) return "";
+      return valor < 10 ? String(valor).padStart(2, "0") : String(valor);
+    }
+
+    function premioPreferidoDaPosicao(posicao) {
+      return MAPA_PREMIOS_SEGUNDA_VEZ[Number(posicao)] || null;
+    }
+
+    function premioExtraDaPosicao600(posicao) {
+      const numero = Number(posicao);
+
+      for (const grupo of Object.values(PREMIOS_EXTRAS_SEGUNDA_VEZ)) {
+        if (grupo.posicoes.includes(numero)) {
+          return grupo;
+        }
+      }
+
+      return null;
+    }
+
+
+    function fecharPopupPremio() {
+      const popup = document.getElementById("premioPopup");
+      const card = document.getElementById("premioPopupCard");
+
+      if (!popup || !card) return;
+
+      if (premioPopupTimer) {
+        clearTimeout(premioPopupTimer);
+        premioPopupTimer = null;
+      }
+
+      card.classList.add("premio-popup-saindo");
+
+      window.setTimeout(() => {
+        popup.classList.add("hidden");
+        card.classList.remove("premio-popup-saindo", "principal", "extra", "vazio");
+      }, 220);
+    }
+
+    function mostrarPopupPremio({ icone = "🎁", titulo = "Resultado", texto = "", subtexto = "", tipo = "principal" } = {}) {
+      const popup = document.getElementById("premioPopup");
+      const card = document.getElementById("premioPopupCard");
+      const iconeEl = document.getElementById("premioPopupIcone");
+      const tituloEl = document.getElementById("premioPopupTitulo");
+      const textoEl = document.getElementById("premioPopupTexto");
+      const subtextoEl = document.getElementById("premioPopupSubtexto");
+
+      if (!popup || !card || !iconeEl || !tituloEl || !textoEl || !subtextoEl) {
+        alert(`${titulo}\n${texto}${subtexto ? "\n" + subtexto : ""}`);
+        return;
+      }
+
+      if (premioPopupTimer) {
+        clearTimeout(premioPopupTimer);
+        premioPopupTimer = null;
+      }
+
+      card.classList.remove("premio-popup-saindo", "principal", "extra", "vazio");
+      card.classList.add(tipo);
+      iconeEl.textContent = icone;
+      tituloEl.textContent = titulo;
+      textoEl.textContent = texto;
+      subtextoEl.textContent = subtexto;
+      popup.classList.remove("hidden");
+    }
+
+    function encontrarPremioDisponivelParaPosicao(posicao, escolhidos) {
+      const escolhidosSet = new Set(escolhidos);
+      const preferido = premioPreferidoDaPosicao(posicao);
+      const ordem = [];
+
+      if (preferido) ordem.push(preferido);
+
+      ORDEM_BACKUP_PREMIOS_SEGUNDA_VEZ.forEach(numero => {
+        if (!ordem.includes(numero)) ordem.push(numero);
+      });
+
+      for (const premio of ordem) {
+        if (!escolhidosSet.has(premio)) return premio;
+      }
+
+      return null;
+    }
+
+    function atualizarBotoesModoPremios(modo) {
+      const btnPrimeira = document.getElementById("btnPremiosPrimeiraVez");
+      const btnSegunda = document.getElementById("btnPremiosSegundaVez");
+      const descricao = document.getElementById("premiosDescricao");
+      const dica = document.getElementById("premiosDica");
+
+      if (btnPrimeira) btnPrimeira.classList.toggle("ativo", modo === "primeira");
+      if (btnSegunda) btnSegunda.classList.toggle("ativo", modo === "segunda");
+
+      if (descricao) descricao.textContent = "";
+      if (dica) dica.textContent = "";
+    }
+
+    function definirModoPremios(modo) {
+      salvarModoPremios(modo);
+      renderizarPremios();
+
+      if (premiosMensagem) {
+        premiosMensagem.textContent = "";
+      }
+
+      if (premiosGrid) {
+        premiosGrid.scrollTop = 0;
+      }
+    }
+
+    function renderizarPremios() {
+      const modo = carregarModoPremios();
+      const escolhidos = carregarPremiosEscolhidos();
+      const escolhidosSet = new Set(escolhidos);
+      const posicoes600 = carregarPosicoesPremios600();
+      const posicoes600Set = new Set(posicoes600);
+
+      atualizarBotoesModoPremios(modo);
+      premiosGrid.innerHTML = "";
+      premiosGrid.classList.toggle("modo-600", modo === "segunda");
+
+      if (modo === "primeira") {
+        for (let numero = 1; numero <= TOTAL_PREMIOS_SECRETOS; numero++) {
+          const botao = document.createElement("button");
+          botao.type = "button";
+          botao.className = "premio-numero";
+          botao.textContent = formatarPremio(numero);
+          botao.dataset.premio = String(numero);
+
+          if (escolhidosSet.has(numero)) {
+            botao.classList.add("escolhido");
+            botao.setAttribute("aria-label", `Prêmio ${formatarPremio(numero)} já escolhido`);
+          } else {
+            botao.setAttribute("aria-label", `Escolher prêmio ${formatarPremio(numero)}`);
+          }
+
+          botao.addEventListener("click", () => escolherPremio(numero));
+          premiosGrid.appendChild(botao);
         }
       } else {
-        pedido.splice(index, 1);
-        botao.textContent = botao.dataset.originalText || "Selecionar";
-        botao.classList.remove("selected-btn");
+        for (let posicao = 1; posicao <= TOTAL_POSICOES_PREMIOS_SEGUNDA_VEZ; posicao++) {
+          const botao = document.createElement("button");
+          botao.type = "button";
+          botao.className = "premio-numero modo-600";
+          botao.textContent = formatarPosicao600(posicao);
+          botao.dataset.posicao = String(posicao);
 
-        const card = botao.closest(".card");
-        if (card) {
-          const botoesSelecionados = card.querySelectorAll(".selected-btn");
-          if (botoesSelecionados.length === 0) {
-            card.classList.remove("selected");
+          if (posicoes600Set.has(posicao)) {
+            botao.classList.add("escolhido");
+            botao.setAttribute("aria-label", `Posição ${formatarPosicao600(posicao)} já escolhida`);
+          } else {
+            botao.setAttribute("aria-label", `Escolher posição ${formatarPosicao600(posicao)}`);
           }
+
+          botao.addEventListener("click", () => escolherPosicaoPremio600(posicao));
+          premiosGrid.appendChild(botao);
         }
       }
 
-      atualizarResumo();
-
-      if (estaSelecionando) {
-        guiarParaProximaCategoria(botao);
-      }
+      const textoModo = modo === "segunda"
+        ? ` • ${posicoes600.length} posições de 600 já tentadas`
+        : "";
+      premiosResumo.textContent = `${escolhidos.length} de ${TOTAL_PREMIOS_SECRETOS} prêmios escolhidos${textoModo}`;
     }
 
-    function guiarParaProximaCategoria(botao) {
-      const secaoAtual = botao.closest("section");
+    function abrirPremios() {
+      iniciarAudio();
 
-      if (!secaoAtual) return;
-
-      const idAtual = secaoAtual.id;
-      const dados = ordemCategorias[idAtual];
-
-      if (!dados) {
-        mostrarToast("Item adicionado ao carrinho.");
+      if (!senhaAdministradoraSessao) {
+        alert("Para abrir os prêmios, primeiro libere o administrador no botão Sortear número. Não será pedida senha de novo enquanto a página estiver aberta.");
         return;
       }
 
-      mostrarToast(dados.texto);
+      renderizarPremios();
 
-      setTimeout(() => {
-        const destino = document.getElementById(dados.proxima);
+      if (premiosMensagem) {
+        premiosMensagem.textContent = "";
+      }
 
-        if (destino) {
-          destino.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
+      if (typeof premiosDialog.showModal === "function") {
+        premiosDialog.showModal();
+      } else {
+        alert("Seu navegador não abriu o popup de prêmios. Atualize o navegador ou use outro aparelho.");
+      }
+    }
+
+    function escolherPremio(numero) {
+      const escolhidos = carregarPremiosEscolhidos();
+
+      if (escolhidos.includes(numero)) {
+        alert(`O prêmio ${formatarPremio(numero)} já foi escolhido.`);
+        return;
+      }
+
+      const confirmado = confirm(`Confirmar escolha do prêmio ${formatarPremio(numero)}?`);
+
+      if (!confirmado) return;
+
+      escolhidos.push(numero);
+      salvarPremiosEscolhidos(escolhidos);
+      renderizarPremios();
+
+      const mensagem = `Escolha o prêmio ${formatarPremio(numero)} na caixa surpresa.`;
+
+      if (premiosMensagem) {
+        premiosMensagem.textContent = mensagem;
+      }
+
+      mostrarPopupPremio({
+        icone: "🎁",
+        titulo: `Prêmio ${formatarPremio(numero)}!`,
+        texto: mensagem,
+        subtexto: "Anota aí, querida, porque prêmio escolhido não volta! ✨",
+        tipo: "principal"
+      });
+
+      tocarToque("bingo");
+    }
+
+    function escolherPosicaoPremio600(posicao) {
+      const posicoesEscolhidas = carregarPosicoesPremios600();
+
+      if (posicoesEscolhidas.includes(posicao)) {
+        alert(`A posição ${formatarPosicao600(posicao)} já foi escolhida.`);
+        return;
+      }
+
+      const confirmado = confirm(`Confirmar escolha da posição ${formatarPosicao600(posicao)}?`);
+
+      if (!confirmado) return;
+
+      posicoesEscolhidas.push(posicao);
+      salvarPosicoesPremios600(posicoesEscolhidas);
+
+      const posicaoPremiada = POSICOES_PREMIADAS_SEGUNDA_VEZ.includes(posicao);
+      const escolhidos = carregarPremiosEscolhidos();
+
+      if (!posicaoPremiada) {
+        const premioExtra = premioExtraDaPosicao600(posicao);
+        renderizarPremios();
+
+        if (premioExtra) {
+          const mensagemExtra = `Posição ${formatarPosicao600(posicao)}: ${premioExtra.nome}!`;
+
+          if (premiosMensagem) {
+            premiosMensagem.textContent = `${premioExtra.emoji} ${mensagemExtra}`;
+          }
+
+          mostrarPopupPremio({
+            icone: premioExtra.emoji,
+            titulo: "Ganhou, querida!",
+            texto: mensagemExtra,
+            subtexto: "O arraiá entregou mimo e glamour! 🌽✨",
+            tipo: "extra"
           });
-        }
-      }, 850);
-    }
 
-    function mostrarToast(texto) {
-      const toast = document.getElementById("toastGuia");
+          tocarToque("bingo");
+        } else {
+          const mensagemVazia = `Posição ${formatarPosicao600(posicao)}: Não foi dessa vez.`;
 
-      toast.textContent = texto;
-      toast.classList.add("mostrar");
-
-      setTimeout(() => {
-        toast.classList.remove("mostrar");
-      }, 1800);
-    }
-
-    function atualizarResumo() {
-      const lista = document.getElementById("pedidoLista");
-      const totalElemento = document.getElementById("pedidoTotal");
-      const contador = document.getElementById("contadorCarrinho");
-
-      contador.textContent = pedido.length;
-
-      if (pedido.length === 0) {
-        lista.innerHTML = "Nenhum item selecionado ainda.";
-        totalElemento.innerHTML = "Total: R$0,00";
-        return;
-      }
-
-      let total = pedido.reduce((soma, item) => soma + item.preco, 0);
-
-      lista.innerHTML = pedido.map(item => `
-        <div class="pedido-item">
-          <span>${item.nome} — ${formatarPreco(item.preco)}</span>
-          <button onclick="removerItem('${item.nome}')">Remover</button>
-        </div>
-      `).join("");
-
-      totalElemento.innerHTML = `Total: ${formatarPreco(total)}`;
-    }
-
-    function removerItem(nome) {
-      pedido = pedido.filter(item => item.nome !== nome);
-
-      document.querySelectorAll("button").forEach(botao => {
-        const onclick = botao.getAttribute("onclick");
-
-        if (onclick && onclick.includes(nome)) {
-          botao.classList.remove("selected-btn");
-          botao.textContent = botao.dataset.originalText || "Selecionar";
-
-          const card = botao.closest(".card");
-          if (card) {
-            const botoesSelecionados = card.querySelectorAll(".selected-btn");
-            if (botoesSelecionados.length === 0) {
-              card.classList.remove("selected");
-            }
+          if (premiosMensagem) {
+            premiosMensagem.textContent = `😅 ${mensagemVazia}`;
           }
+
+          mostrarPopupPremio({
+            icone: "😅",
+            titulo: "Quase, diva!",
+            texto: mensagemVazia,
+            subtexto: "Respira, ajeita o look e tenta outro número. 💅",
+            tipo: "vazio",
+            duracao: 4800
+          });
+
+          tocarToque("toque");
         }
-      });
 
-      atualizarResumo();
-    }
-
-    function limparPedido() {
-      pedido = [];
-
-      document.querySelectorAll(".selected-btn").forEach(botao => {
-        botao.classList.remove("selected-btn");
-        botao.textContent = botao.dataset.originalText || "Selecionar";
-      });
-
-      document.querySelectorAll(".card.selected").forEach(card => {
-        card.classList.remove("selected");
-      });
-
-      atualizarResumo();
-    }
-
-    function abrirPedido() {
-      document.getElementById("fundoPedido").classList.add("aberto");
-    }
-
-    function fecharPedido() {
-      document.getElementById("fundoPedido").classList.remove("aberto");
-    }
-
-    function fecharAoClicarFora(event) {
-      if (event.target.id === "fundoPedido") {
-        fecharPedido();
-      }
-    }
-
-    function enviarWhatsApp() {
-      if (pedido.length === 0) {
-        alert("Selecione pelo menos um item antes de enviar o orçamento.");
         return;
       }
 
-      const total = pedido.reduce((soma, item) => soma + item.preco, 0);
+      const premioRevelado = encontrarPremioDisponivelParaPosicao(posicao, escolhidos);
 
-      const dataFesta = document.getElementById("dataFesta").value;
-      const horarioFesta = document.getElementById("horarioFesta").value;
-      const temaFesta = document.getElementById("temaFesta").value.trim();
-      const observacoesFesta = document.getElementById("observacoesFesta").value.trim();
+      if (!premioRevelado) {
+        renderizarPremios();
 
-      const dataTexto = dataFesta ? formatarData(dataFesta) : "Não informado";
-      const horarioTexto = horarioFesta ? horarioFesta : "Não informado";
-      const temaTexto = temaFesta ? temaFesta : "Não informado";
-      const observacoesTexto = observacoesFesta ? observacoesFesta : "Nenhuma observação informada";
+        const mensagemEsgotada = `Posição ${formatarPosicao600(posicao)} era premiada, mas todos os prêmios já foram escolhidos.`;
 
-      const itensTexto = pedido
-        .map(item => `- ${item.nome}: ${formatarPreco(item.preco)}`)
-        .join("\n");
+        if (premiosMensagem) {
+          premiosMensagem.textContent = mensagemEsgotada;
+        }
 
-      const mensagem =
-        `Olá! Gostaria de fazer um orçamento com os seguintes itens:\n\n` +
-        `${itensTexto}\n\n` +
-        `Total aproximado: ${formatarPreco(total)}\n\n` +
-        `Data da festa: ${dataTexto}\n` +
-        `Horário da festa: ${horarioTexto}\n` +
-        `Tema da festa: ${temaTexto}\n` +
-        `Observações: ${observacoesTexto}\n\n` +
-        `Meu nome:\n` +
-        `Endereço/bairro:\n`;
+        mostrarPopupPremio({
+          icone: "⚠️",
+          titulo: "Prêmio esgotado!",
+          texto: mensagemEsgotada,
+          subtexto: "Essa posição era poderosa, mas chegou tarde no close. ✨",
+          tipo: "vazio"
+        });
 
-      const telefone = "5511974230782";
-      const link = `https://wa.me/${telefone}?text=${encodeURIComponent(mensagem)}`;
+        tocarToque("toque");
+        return;
+      }
 
-      window.open(link, "_blank");
+      escolhidos.push(premioRevelado);
+      salvarPremiosEscolhidos(escolhidos);
+      renderizarPremios();
+
+      const mensagemPremio = `Posição ${formatarPosicao600(posicao)} revelou o prêmio ${formatarPremio(premioRevelado)}.`;
+      const subtextoPremio = "Pegue esse prêmio na caixa surpresa. 🎁";
+
+      if (premiosMensagem) {
+        premiosMensagem.textContent = `${mensagemPremio} ${subtextoPremio}`;
+      }
+
+      mostrarPopupPremio({
+        icone: "🎁",
+        titulo: `Prêmio ${formatarPremio(premioRevelado)}!`,
+        texto: mensagemPremio,
+        subtexto: subtextoPremio,
+        tipo: "principal",
+        duracao: 7000
+      });
+
+      tocarToque("bingo");
     }
 
-    document.querySelectorAll(".select-btn, .small-btn").forEach(botao => {
-      botao.dataset.originalText = botao.textContent.trim();
+    function zerarPremiosEscolhidos() {
+      const escolhidos = carregarPremiosEscolhidos();
+      const posicoes = carregarPosicoesPremios600();
+
+      if (!escolhidos.length && !posicoes.length) {
+        alert("Nenhum prêmio ou posição foi escolhido ainda.");
+        return;
+      }
+
+      const confirmado = confirm("Tem certeza que deseja zerar os prêmios e posições escolhidas neste aparelho?");
+
+      if (!confirmado) return;
+
+      localStorage.removeItem(CHAVE_PREMIOS_ESCOLHIDOS);
+      localStorage.removeItem(CHAVE_PREMIOS_POSICOES_600);
+      renderizarPremios();
+
+      if (premiosMensagem) {
+        premiosMensagem.textContent = "Nenhum prêmio escolhido agora.";
+      }
+
+      tocarToque("toque");
+    }
+
+
+    function celulaMarcada(linha, coluna) {
+      const celula = document.querySelector(`td[data-linha="${linha}"][data-coluna="${coluna}"]`);
+      return celula && celula.classList.contains("marcado");
+    }
+
+    function verificarBingo() {
+      if (bingoCelebrado) return;
+
+      const linhas = [];
+      for (let i = 0; i < 5; i++) {
+        linhas.push([[i,0],[i,1],[i,2],[i,3],[i,4]]);
+        linhas.push([[0,i],[1,i],[2,i],[3,i],[4,i]]);
+      }
+      linhas.push([[0,0],[1,1],[2,2],[3,3],[4,4]]);
+      linhas.push([[0,4],[1,3],[2,2],[3,1],[4,0]]);
+
+      const ganhou = linhas.some(linha => linha.every(([r, c]) => celulaMarcada(r, c)));
+
+      if (ganhou) {
+        bingoCelebrado = true;
+        cartelaVencedora.textContent = cartelaAtual.id;
+        tocarToque("bingo");
+        if (typeof bingoDialog.showModal === "function") {
+          bingoDialog.showModal();
+        } else {
+          alert(`Parabéns! BINGO na cartela ${cartelaAtual.id}!`);
+        }
+      }
+    }
+
+    function abrirMenuLateral() {
+      menuLateral.classList.add("aberto");
+      menuLateral.setAttribute("aria-hidden", "false");
+      menuBackdrop.classList.remove("hidden");
+      document.body.classList.add("menu-aberto");
+      btnAbrirMenu.setAttribute("aria-expanded", "true");
+      carregarSorteadosDoBanco(false);
+    }
+
+    function fecharMenuLateral() {
+      menuLateral.classList.remove("aberto");
+      menuLateral.setAttribute("aria-hidden", "true");
+      menuBackdrop.classList.add("hidden");
+      document.body.classList.remove("menu-aberto");
+      btnAbrirMenu.setAttribute("aria-expanded", "false");
+    }
+
+    document.getElementById("btnEntrar").addEventListener("click", async () => {
+      iniciarAudio();
+
+      const botaoEntrar = document.getElementById("btnEntrar");
+      if (botaoEntrar.disabled) return;
+      botaoEntrar.disabled = true;
+
+      try {
+        const perfil = await garantirCartelaDoUsuario(false);
+        if (!perfil) return;
+
+        document.getElementById("intro").classList.add("hidden");
+        iniciarAtualizacaoAutomatica();
+        carregarSorteadosDoBanco(true);
+        tocarToque("toque");
+      } finally {
+        botaoEntrar.disabled = false;
+      }
     });
 
-    document.querySelectorAll("button, a").forEach(elemento => {
-      elemento.addEventListener("click", tocarSomClique);
+    btnAbrirMenu.addEventListener("click", abrirMenuLateral);
+    btnFecharMenu.addEventListener("click", fecharMenuLateral);
+    menuBackdrop.addEventListener("click", fecharMenuLateral);
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && menuLateral.classList.contains("aberto")) {
+        fecharMenuLateral();
+      }
     });
+
+    document.addEventListener("visibilitychange", atualizarSorteadosSilenciosamente);
+    window.addEventListener("focus", atualizarSorteadosSilenciosamente);
+    window.addEventListener("pageshow", atualizarSorteadosSilenciosamente);
+    window.addEventListener("online", atualizarSorteadosSilenciosamente);
+
+    document.getElementById("btnNovaHero").addEventListener("click", trocarCartelaAleatoria);
+
+    document.getElementById("btnNovaCartela").addEventListener("click", trocarCartelaAleatoria);
+
+    document.getElementById("btnReiniciar").addEventListener("click", novaPartida);
+
+    document.getElementById("btnPremios").addEventListener("click", abrirPremios);
+
+    document.getElementById("btnPremiosPrimeiraVez").addEventListener("click", () => definirModoPremios("primeira"));
+
+    document.getElementById("btnPremiosSegundaVez").addEventListener("click", () => definirModoPremios("segunda"));
+
+    if (btnSortearMenu) btnSortearMenu.addEventListener("click", sortearNumero);
+
+    if (btnSortearRapido) btnSortearRapido.addEventListener("click", sortearNumero);
+
+    document.getElementById("btnFecharPremioPopup").addEventListener("click", fecharPopupPremio);
+
+    document.getElementById("btnFecharDialog").addEventListener("click", () => {
+      bingoDialog.close();
+    });
+
+    document.getElementById("btnFecharPremios").addEventListener("click", () => {
+      premiosDialog.close();
+    });
+
+    document.getElementById("btnZerarPremios").addEventListener("click", zerarPremiosEscolhidos);
+
+    document.getElementById("btnCancelarData").addEventListener("click", () => {
+      fecharDataNascimentoDialog(null);
+    });
+
+    document.getElementById("btnConfirmarData").addEventListener("click", () => {
+      try {
+        const perfil = interpretarDataNascimento(dataNascimentoInput.value);
+        fecharDataNascimentoDialog(perfil);
+      } catch (erro) {
+        dataNascimentoErro.textContent = erro.message;
+      }
+    });
+
+    dataNascimentoInput.addEventListener("input", () => {
+      dataNascimentoInput.value = formatarDataNascimento(dataNascimentoInput.value);
+      dataNascimentoErro.textContent = "";
+    });
+
+    dataNascimentoInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("btnConfirmarData").click();
+      }
+    });
+
+    document.getElementById("btnCancelarSenha").addEventListener("click", () => {
+      fecharSenhaDialog("");
+    });
+
+    document.getElementById("btnConfirmarSenha").addEventListener("click", () => {
+      fecharSenhaDialog(senhaInput.value);
+    });
+
+    senhaInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        fecharSenhaDialog(senhaInput.value);
+      }
+    });
+
+    // Se a pessoa já informou a data neste celular, a cartela entra pronta.
+    // Com Google Sheets, a reserva é conferida de novo para impedir repetição na rodada atual.
+    const perfilInicial = carregarPerfilCartela();
+    if (perfilInicial) {
+      document.getElementById("intro").classList.add("hidden");
+      aplicarPerfilCartela(perfilInicial);
+      if (googleSheetsConfigurado()) {
+        garantirCartelaDoUsuario(false).then(() => carregarSorteadosDoBanco(false));
+      }
+    } else {
+      renderizarCartelaBloqueada();
+    }
+    atualizarModoAdministrador();
+    iniciarAtualizacaoAutomatica();
   </script>
-
 </body>
 </html>
